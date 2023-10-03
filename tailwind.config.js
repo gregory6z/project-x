@@ -4,11 +4,37 @@ module.exports = {
   content: ["./src/app/**/*.tsx"],
   theme: {
     extend: {
-      colors: {},
-      // fontFamily: {
-      //   montserrat: "Montserrat",
-      //   genos: "Genos",
-      // },
+      colors: {
+        "gray-50": "#F1F1F1",
+        "gray-100": "#EAEAEA",
+        "gray-200": "#D4D4D4",
+        "gray-300": "#737373",
+        "gray-400": "#686868",
+        "gray-500": "#5C5C5C",
+        "gray-600": "#565656",
+        "gray-700": "#454545",
+        "gray-800": "#343434",
+        "gray-900": "#282828",
+
+        "yellow-normal": "#FED23F",
+        "yellow-hover": "#e5bd39",
+        "yellow-active": "#cba832",
+
+        "yellow-light": "#fffbec",
+        "yellow-light-hover": "#fff8e2",
+        "yellow-light-active": "#fff1c3",
+
+        "yellow-dark": "#bf9e2f",
+        "yellow-dark-hover": "#987e26",
+        "yellow-dark-active": "#725e1c",
+        "yellow-darker": "#594a16",
+
+        "background-dark-900": "#181818",
+        "background-dark-500": "#343434",
+      },
+      fontFamily: {
+        roboto: "Roboto",
+      },
       keyframes: {
         slideIn: {
           "0%": { opacity: 0, transform: "translateX(-100%)" },
