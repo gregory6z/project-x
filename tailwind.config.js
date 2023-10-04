@@ -4,6 +4,12 @@ module.exports = {
   content: ["./src/app/**/*.tsx"],
   theme: {
     extend: {
+      screens: {
+        sm: "450px",
+        // => @media (min-width: 640px) { ... }
+
+        // => @media (min-width: 1536px) { ... }
+      },
       colors: {
         "gray-50": "#F1F1F1",
         "gray-100": "#EAEAEA",

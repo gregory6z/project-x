@@ -1,7 +1,9 @@
+import { Hero } from "./Home/components/Hero"
+
 export default function Home() {
   return (
-    <div className="">
-      <h1>ANUBIS PROJECT</h1>
-    </div>
+    <>
+      <Hero></Hero>
+    </>
   )
 }
