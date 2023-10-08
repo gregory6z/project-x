@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`w-full rounded-md bg-yellow-normal py-3 font-extrabold tracking-widest text-background-dark-500 transition-all hover:bg-yellow-active ${className}`}
+      className={`w-full rounded-md bg-yellow-normal   font-extrabold tracking-widest text-background-dark-500 transition-all hover:bg-yellow-active ${className}`}
       {...props}
     >
       {text}

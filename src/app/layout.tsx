@@ -1,6 +1,6 @@
 import { Header } from "./components/Header"
 import "./global.css"
-import { Roboto } from "next/font/google"
+import { Poppins, Roboto } from "next/font/google"
 
 export const metadata = {
   title: "PARIS INVEST | HOME",
