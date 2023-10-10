@@ -47,7 +47,7 @@ export function Header() {
       <DialogPrimitive.Overlay className=" fixed  z-10  h-screen w-screen transform bg-black/50 data-[state=closed]:animate-overlayFade data-[state=open]:animate-overlayShow" />
 
       <header
-        className={` sticky top-0 z-10  flex   h-[4rem] w-full items-center bg-background-dark-900 duration-700 ease-in-out   lg:h-[5rem] lg:px-16 ${
+        className={` sticky top-0 z-10  flex h-[4rem]  w-full items-center  border-b border-solid border-gray-800 bg-background-dark-800  duration-700 ease-in-out   lg:h-[5rem] lg:px-16 ${
           isHidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
         }`}
       >
@@ -76,7 +76,7 @@ export function Header() {
             </Link>
             <Button
               text="Devenez un investisseur"
-              className="lg:h-[48px] lg:w-[268px] "
+              className="text-[13px]  lg:h-[48px] lg:w-[240px]"
             />
           </div>
         </div>

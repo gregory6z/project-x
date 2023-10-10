@@ -11,6 +11,11 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
 
+      backgroundImage: {
+        "radial-gradient":
+          "radial-gradient(32.59% 21.06% at 25.98% 13.43%, white 0%, rgba(255, 255, 255, 0) 100%)",
+      },
+
       colors: {
         "gray-50": "#F1F1F1",
         "gray-100": "#EAEAEA",
@@ -36,7 +41,9 @@ module.exports = {
         "yellow-dark-active": "#725e1c",
         "yellow-darker": "#594a16",
 
-        "background-dark-900": "#181818",
+        "background-dark-900": "#0D0D0F",
+        "background-dark-800": "#121214",
+        "background-dark-700": "#1E1E20",
         "background-dark-500": "#343434",
       },
       fontFamily: {
