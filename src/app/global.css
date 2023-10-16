@@ -10,6 +10,7 @@ body, input , textarea, button {
     /* line-height: "160%"; */
     text-rendering: optimizeLegibility;
     -webkit-font-smothing:antialiased;
+    
 }
 
 
@@ -18,6 +19,13 @@ body, input , textarea, button {
     animation: slide-in 0.5s ease-in-out;
     transform: translateX(-100%);
 }
+
+.animate-final-state {
+    opacity: 1; /* Garanta que o elemento permaneça visível */
+    transform: translateY(0); /* Garanta que o elemento permaneça na posição final */
+  }
+
+
 
 
 

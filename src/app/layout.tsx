@@ -1,3 +1,5 @@
+import { ButtonsSocialNetworks } from "./components/ButtonsSocialNetworks"
+import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import "./global.css"
 import { Poppins, Roboto } from "next/font/google"
@@ -21,10 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-background-dark-800  `}>
         <>
           <Header />
           {children}
+          <Footer />
+          <ButtonsSocialNetworks />
         </>
       </body>
     </html>

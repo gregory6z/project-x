@@ -66,6 +66,16 @@ module.exports = {
             transform: "translate(-100%)",
           },
         },
+        fadeInFromTop: {
+          from: {
+            opacity: 0,
+            transform: "translateY(-30px)",
+          },
+          to: {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
         overlayShow: {
           from: { opacity: 0 },
           to: { opacity: 1 },
@@ -76,6 +86,7 @@ module.exports = {
         },
       },
       animation: {
+        animateOnOpen: "fadeInFromTop 500ms ease-in-out",
         slideIn: "slideIn 500ms cubic-bezier(0.4, 0, 0.6, 1)",
         slideOut: "slideOut 400ms cubic-bezier(0.4, 0, 0.6, 1)",
         overlayShow: "overlayShow 250ms cubic-bezier(0.4, 0, 0.6, 1)",
