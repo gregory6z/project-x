@@ -1,3 +1,9 @@
+import { Banner } from "./components/Banner"
+
 export default function HowItWorks() {
-  return <>nova pagina</>
+  return (
+    <>
+      <Banner></Banner>
+    </>
+  )
 }

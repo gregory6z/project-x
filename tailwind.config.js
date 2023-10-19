@@ -93,6 +93,12 @@ module.exports = {
         overlayFade: "overlayFade 200ms cubic-bezier(0.4, 0, 0.6, 1)",
         overlayFad2: "overlayFade 500ms cubic-bezier(0.4, 0, 0.6, 1)",
       },
+
+      customStyles: {
+        "border-theme": "border-b  border-solid border-gray-800",
+        "responsive-container":
+          "flex mx-[1.25rem] md:mx-10 mx-auto lg:max-w-[1120px] xl:mx-auto lg:mx-16 xl:mx-0",
+      },
     },
   },
 
