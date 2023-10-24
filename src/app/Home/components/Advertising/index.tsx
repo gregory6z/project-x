@@ -13,7 +13,7 @@ const poppins = Poppins({
 export function Adversiting() {
   return (
     <div className=" z-1  flex h-full w-full  border-b  border-solid border-gray-800    bg-background-dark-900    xl:relative">
-      <div className=" lg z-1  mx-[1.25rem]  my-16 flex flex-col items-center gap-16 md:flex-row md:px-4 lg:mx-auto lg:my-0 lg:h-screen lg:max-w-[1120px] lg:justify-between lg:gap-12 lg:px-16 xl:px-0">
+      <div className=" lg z-1  mx-[1.25rem]  my-16 flex flex-col items-center gap-16 md:flex-row md:px-4 lg:mx-auto lg:my-0 lg:h-[calc(100vh-8rem)] lg:max-w-[1120px] lg:justify-between lg:gap-12 lg:px-16 xl:px-0">
         <div className=" z-10  mx-auto mb-10 flex h-[180px] w-[280px] items-center  justify-center rounded-[30px] border border-solid border-gray-300 bg-gradient-to-br from-gray-200 lg:mx-0 lg:h-[500px] lg:w-[460px]     ">
           <h1
             className={` ${poppins.className} w-[85%] font-[Poppins] text-2xl  font-bold lg:text-5xl lg:leading-[130%]`}

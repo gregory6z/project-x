@@ -1,6 +1,6 @@
 "use client"
-import { HTMLMotionProps, motion } from "framer-motion"
-import { ReactNode, useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import { ReactNode } from "react"
 import { useInView } from "react-intersection-observer"
 
 interface IMotionProps {

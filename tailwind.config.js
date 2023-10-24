@@ -50,6 +50,15 @@ module.exports = {
         roboto: "Roboto",
       },
       keyframes: {
+        slideDownAc: {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        slideUpAc: {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+
         slideIn: {
           "0%": { opacity: 0, transform: "translateX(-100%)" },
           "50%": { opacity: 0 },
@@ -92,6 +101,9 @@ module.exports = {
         overlayShow: "overlayShow 250ms cubic-bezier(0.4, 0, 0.6, 1)",
         overlayFade: "overlayFade 200ms cubic-bezier(0.4, 0, 0.6, 1)",
         overlayFad2: "overlayFade 500ms cubic-bezier(0.4, 0, 0.6, 1)",
+
+        slideDownAc: "slideDownAc 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+        slideUpAc: "slideUpAc 300ms cubic-bezier(0.87, 0, 0.13, 1)",
       },
 
       customStyles: {
