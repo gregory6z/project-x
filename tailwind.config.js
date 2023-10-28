@@ -50,6 +50,15 @@ module.exports = {
         roboto: "Roboto",
       },
       keyframes: {
+        skelleton: {
+          "0%": {
+            backgroundPosition: "-200px 0",
+          },
+          "100%": {
+            backgroundPosition: "calc(200px + 100%) 0",
+          },
+        },
+
         slideDownAc: {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -86,21 +95,28 @@ module.exports = {
           },
         },
         overlayShow: {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
         },
         overlayFade: {
           from: { opacity: 1 },
           to: { opacity: 0 },
         },
+        shimmer: {
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
       animation: {
+        skeletonAnimation: "shimmer 1300ms ease-in-out infinite",
         animateOnOpen: "fadeInFromTop 500ms ease-in-out",
         slideIn: "slideIn 500ms cubic-bezier(0.4, 0, 0.6, 1)",
         slideOut: "slideOut 400ms cubic-bezier(0.4, 0, 0.6, 1)",
-        overlayShow: "overlayShow 250ms cubic-bezier(0.4, 0, 0.6, 1)",
+        overlayShow: "overlayShow 800ms cubic-bezier(0.61, 1, 0.88, 1)",
         overlayFade: "overlayFade 200ms cubic-bezier(0.4, 0, 0.6, 1)",
         overlayFad2: "overlayFade 500ms cubic-bezier(0.4, 0, 0.6, 1)",
+        animateFade: "overlayShow 1200ms cubic-bezier(0.61, 1, 0.88, 1)",
 
         slideDownAc: "slideDownAc 300ms cubic-bezier(0.87, 0, 0.13, 1)",
         slideUpAc: "slideUpAc 300ms cubic-bezier(0.87, 0, 0.13, 1)",

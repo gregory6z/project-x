@@ -31,7 +31,7 @@ body, input , textarea, button {
 
   @layer components {
     .responsive-container {
-        @apply flex mx-[1.25rem] md:mx-10 lg:mx-auto lg:max-w-[1120px] lg:mx-16 xl:mx-0 xl:mx-auto
+        @apply flex px-[1.25rem] md:px-10 lg:mx-auto lg:max-w-[1120px] lg:px-16 xl:px-0 xl:mx-auto
     }
 
     .h1-custom {
@@ -40,6 +40,24 @@ body, input , textarea, button {
 
     .border-custom {
         @apply border-b border-solid border-gray-800
+    }
+
+    .link:focus {
+        outline: 2px solid yellow; /* Define a cor amarela desejada para a borda de foco */
+        outline-offset: 2px; /* Espaço entre o texto e a borda de foco */
+      }
+
+    .skelleton-item {
+        @apply  relative  overflow-hidden bg-gradient-to-r from-transparent
+        via-gray-800
+        to-transparent
+        shadow-md
+        /* shadow-gray-100/20 */
+        before:absolute
+        before:inset-0
+        before:-translate-x-full before:animate-[shimmer_1300ms_infinite]
+        /* before:border-t-4 before:border-gray-100/20 */
+        before:bg-gradient-to-r before:from-transparent before:via-gray-200/10  before:to-transparent
     }
 
 

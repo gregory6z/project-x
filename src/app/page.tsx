@@ -3,7 +3,7 @@ import { Depositions } from "./Home/components/Depositions"
 import { Hero } from "./Home/components/Hero"
 import { Simulator } from "./Home/components/Simulator"
 import { VideoContainer } from "./Home/components/VideoContainer"
-import { Investments } from "./components/Investments"
+import { LastInvestments } from "./components/Investments"
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <VideoContainer />
       <Adversiting />
       <Simulator />
-      <Investments />
+      <LastInvestments />
       <Depositions />
     </>
   )

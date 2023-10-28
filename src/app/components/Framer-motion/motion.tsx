@@ -16,8 +16,8 @@ interface MotionElementProps extends IMotionProps {
 interface IMotionCascadeProps {
   children: ReactNode[]
   shouldAnimate?: boolean // Adicione uma propriedade para controlar a animação
-  delay: number
-  className: ReactNode
+  delay?: number
+  className?: ReactNode
 }
 
 export function MotionElement({

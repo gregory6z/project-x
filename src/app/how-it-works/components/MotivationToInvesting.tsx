@@ -31,7 +31,7 @@ export function MotivationToInvesting() {
 
             <div className=" flex-1 text-gray-100">
               <MotionCascade delay={0} className="flex  flex-col gap-6">
-                <h1 className="text-xl  opacity-90 lg:text-4xl">
+                <h1 className="text-xl  font-bold text-yellow-normal opacity-90 lg:text-4xl">
                   Diversifiez votre portefeuille comme le font les grands
                   investisseurs.
                 </h1>
@@ -55,7 +55,7 @@ export function MotivationToInvesting() {
             </div>
             <div className=" flex-1  text-gray-100">
               <MotionCascade delay={0} className="flex  flex-col gap-6">
-                <h1 className="text-xl opacity-90 lg:text-4xl">
+                <h1 className="text-xl font-bold text-yellow-normal opacity-90 lg:text-4xl ">
                   Protégez votre portefeuille des mouvements rapides du marché.
                 </h1>
                 <p className="opacity-70 lg:text-xl">
@@ -79,7 +79,7 @@ export function MotivationToInvesting() {
 
             <div className=" flex-1  text-gray-100">
               <MotionCascade delay={0} className="flex  flex-col gap-6">
-                <h1 className="text-xl opacity-90 lg:text-4xl">
+                <h1 className="text-xl font-bold text-yellow-normal opacity-90 lg:text-4xl ">
                   Contrôlez vos investissements facilement depuis votre
                   téléphone
                 </h1>

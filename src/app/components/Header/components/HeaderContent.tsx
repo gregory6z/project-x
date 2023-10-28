@@ -7,7 +7,7 @@ import { TriggerButton } from "./TriggerButton"
 export function HeaderContent() {
   return (
     <div className="mx-[1.25rem] flex  w-full items-center justify-between   lg:mx-auto lg:max-w-[1240px]">
-      <Link href="/" className="lg:hidden">
+      <Link href="/" className="  lg:hidden">
         <Image src="logo.svg" width="180" height="60" alt="logo"></Image>
       </Link>
       <Link href="/" className="hidden lg:block">
@@ -16,7 +16,7 @@ export function HeaderContent() {
       <TriggerButton />
 
       <div className="hidden  items-center gap-8 lg:flex">
-        <Link href="/how-it-works" className="text-gray-100">
+        <Link href="/investments" className="text-gray-100">
           Offres d'investissement
         </Link>
 
@@ -27,10 +27,7 @@ export function HeaderContent() {
         <Link href={"#"} className="text-gray-100">
           Connecter
         </Link>
-        <Button
-          text="Devenez un investisseur"
-          className="text-[13px] font-bold lg:h-[48px] lg:w-[240px]"
-        />
+        <Button text="Devenez un investisseur" className="" variant="sm" />
       </div>
     </div>
   )
