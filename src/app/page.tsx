@@ -1,19 +1,27 @@
-import { Adversiting } from "./Home/components/Advertising"
-import { Depositions } from "./Home/components/Depositions"
-import { Hero } from "./Home/components/Hero"
-import { Simulator } from "./Home/components/Simulator"
-import { VideoContainer } from "./Home/components/VideoContainer"
+import { Adversiting } from "./(not-connected)/Home/components/Advertising"
+import { Depositions } from "./(not-connected)/Home/components/Depositions"
+import { Hero } from "./(not-connected)/Home/components/Hero"
+import { Simulator } from "./(not-connected)/Home/components/Simulator"
+import { VideoContainer } from "./(not-connected)/Home/components/VideoContainer"
+import { ButtonsSocialNetworks } from "./components/ButtonsSocialNetworks"
+import { Footer } from "./components/Footer"
+import { Header } from "./components/Header"
 import { LastInvestments } from "./components/Investments"
 
 export default function Home() {
   return (
     <>
+      <Header />
       <Hero />
       <VideoContainer />
       <Adversiting />
       <Simulator />
       <LastInvestments />
-      <Depositions />
+      <div className="border-custom">
+        <Depositions />
+      </div>
+      <Footer />
+      <ButtonsSocialNetworks />
     </>
   )
 }

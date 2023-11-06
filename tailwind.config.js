@@ -107,8 +107,14 @@ module.exports = {
             transform: "translateX(100%)",
           },
         },
+        openScale: {
+          "0%": { opacity: 0 },
+
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
+        scaleAnimation: "openScale 2s  cubic-bezier(0.61, 1, 0.88, 1)  ",
         skeletonAnimation: "shimmer 1300ms ease-in-out infinite",
         animateOnOpen: "fadeInFromTop 500ms ease-in-out",
         slideIn: "slideIn 500ms cubic-bezier(0.4, 0, 0.6, 1)",

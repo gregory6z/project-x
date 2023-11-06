@@ -3,6 +3,7 @@ import Image from "next/image"
 
 import { Button } from "../../Button"
 import { TriggerButton } from "./TriggerButton"
+import { UserButtonClerk } from "./UserButtonClerk"
 
 export function HeaderContent() {
   return (
@@ -23,11 +24,7 @@ export function HeaderContent() {
         <Link href="/how-it-works" className="text-gray-100">
           Comment ça marche
         </Link>
-
-        <Link href={"#"} className="text-gray-100">
-          Connecter
-        </Link>
-        <Button text="Devenez un investisseur" className="" variant="sm" />
+        <UserButtonClerk></UserButtonClerk>
       </div>
     </div>
   )

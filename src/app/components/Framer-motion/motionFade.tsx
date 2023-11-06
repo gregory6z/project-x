@@ -6,8 +6,20 @@ import { useInView } from "react-intersection-observer"
 
 interface IMotionProps {
   children: ReactNode
+  delay?: number
+  className?: string
+  duration?: number
+  scale?: number
+  animate?: string
 }
-export function MotionFadeElement({ children, ...props }: IMotionProps) {
+export function MotionFadeElement({
+  children,
+  delay = 0.5,
+  duration = 1,
+  scale = 0.93,
+  className,
+  ...props
+}: IMotionProps) {
   const [ref, inView] = useInView({
     triggerOnce: true, // A animação será acionada apenas uma vez quando o elemento estiver visível
   })
@@ -15,12 +27,14 @@ export function MotionFadeElement({ children, ...props }: IMotionProps) {
   return (
     <div ref={ref}>
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, scale }}
         animate={{
           opacity: inView ? 1 : 0,
+          scale: inView ? 1 : scale,
         }}
-        transition={{ duration: 1.5, easing: "linear" }}
+        transition={{ duration, easing: "linear", delay }}
         {...props}
+        className={className}
       >
         {children}
       </motion.div>
