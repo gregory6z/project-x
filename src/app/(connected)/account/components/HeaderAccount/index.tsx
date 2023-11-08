@@ -11,10 +11,11 @@ import {
 import Link from "next/link"
 
 import logoImg from "../../../../../../public/logo.svg"
+import { Suspense } from "react"
 
 export function HeaderAccount() {
   return (
-    <header className="fixed bottom-0 z-10   h-[3.5rem] w-full   bg-background-dark-700 text-gray-100/80 lg:sticky lg:top-0 lg:h-[5.5rem] lg:px-16 xl:px-0">
+    <header className="fixed bottom-0 z-50   h-[3.5rem] w-full   bg-background-dark-700 text-gray-100/80 lg:sticky lg:top-0 lg:h-[5.5rem] lg:px-16 xl:px-0">
       <div className="mx-auto flex h-full w-full items-center justify-between lg:max-w-[1340px]">
         <Link href="/" className="hidden lg:block">
           <Image src={logoImg} width="240" height="80" alt="logo"></Image>
@@ -42,6 +43,7 @@ export function HeaderAccount() {
           </div>
           <div className="flex items-center justify-center lg:gap-3">
             <UserButton></UserButton>
+
             <p className="hidden lg:block">Mon compte</p>
           </div>
         </nav>
