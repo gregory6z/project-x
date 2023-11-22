@@ -29,16 +29,16 @@ export default function Account() {
             </p>
             <div className="flex h-full gap-4 border border-solid border-green-400 p-4 text-gray-100">
               <div>
-                <Image
-                  src={https://www.canva.com/design/DAFzm44hSik/NZvifdIs7a5jOEYWpMUGyA/view?utm_content=DAFzm44hSik&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel}
+                {/* <Image
+                  src={presenteImg}
                   width={50}
                   height={50}
                   alt={""}
                   className=""
-                ></Image>
+                ></Image> */}
               </div>
-              <p>aqui</p>
-              <p>aqui</p>
+              {/* <p>aqui</p>
+              <p>aqui</p> */}
             </div>
           </div>
         </div>

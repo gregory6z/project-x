@@ -31,7 +31,7 @@ body, input , textarea, button {
 
   @layer components {
     .responsive-container {
-        @apply flex px-[1.25rem] md:px-10 lg:mx-auto lg:max-w-[1120px] lg:px-16 xl:px-0 xl:mx-auto
+        @apply flex px-[1.25rem] md:px-10 lg:mx-auto lg:max-w-[1225px] lg:px-16 xl:px-0 xl:mx-auto
     }
 
     .delayed-animation {

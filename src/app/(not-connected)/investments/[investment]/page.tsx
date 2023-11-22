@@ -21,7 +21,6 @@ export default function Investiment({
       <DetailedInvestiment />
       <ProjectedScenarios />
       <BenefitsAndRisks />
-      <Footer></Footer>
     </>
   )
 }

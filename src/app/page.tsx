@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <VideoContainer />
       <Adversiting />
-      <Simulator />
+      {/* <Simulator /> */}
       <LastInvestments />
       <div className="border-custom">
         <Depositions />

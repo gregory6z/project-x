@@ -7,7 +7,7 @@ import { UserButtonClerk } from "./UserButtonClerk"
 
 export function HeaderContent() {
   return (
-    <div className="mx-[1.25rem] flex  w-full items-center justify-between   lg:mx-auto lg:max-w-[1240px]">
+    <div className="mx-[1.25rem] flex  w-full items-center justify-between  lg:mx-auto lg:max-w-[1240px]">
       <Link href="/" className="  lg:hidden">
         <Image src="logo.svg" width="180" height="60" alt="logo"></Image>
       </Link>
@@ -24,7 +24,6 @@ export function HeaderContent() {
         <Link href="/how-it-works" className="text-gray-100">
           Comment ça marche
         </Link>
-        <UserButtonClerk></UserButtonClerk>
       </div>
     </div>
   )
