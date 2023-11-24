@@ -5,7 +5,7 @@ import { ProgressBar } from "@/app/components/Progress"
 import DetailedInvestiment from "./components/DetailedInvestiment"
 import { ProjectedScenarios } from "./components/ProjectedScenarios"
 import { BenefitsAndRisks } from "./components/BenefitsAndRisks"
-import { Simulator } from "@/app/(not-connected)/Home/components/Simulator"
+import { Simulator } from "@/app/(not-connected)/(Home)/components/Simulator"
 import { Header } from "@/app/components/Header"
 import { Footer } from "@/app/components/Footer"
 

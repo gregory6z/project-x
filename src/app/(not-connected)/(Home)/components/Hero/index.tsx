@@ -21,7 +21,7 @@ export async function Hero() {
       shape sombra direita imagem
       <div className=" z-0 hidden  before:absolute before:right-[30%] before:top-[30%] before:z-[1]  before:h-[180px] before:w-[180px] before:rounded-full before:bg-gray-100 before:blur-[150px]  lg:block lg:break-before-auto"></div> */}
 
-      <div className=" z-[0] mx-[1.25rem] mb-[8rem] mt-[6rem] flex h-full  justify-between  gap-2 sm:mx-auto   sm:px-10 md:flex md:px-10 lg:mx-auto lg:mb-2 lg:h-[calc(100vh-11rem)] lg:max-w-[1225px]  lg:gap-4 lg:px-16 lg:pb-16 xl:mb-2 xl:px-0 ">
+      <div className=" z-[0] mx-[1.25rem] mb-[8rem] mt-[6rem] flex h-full  justify-between  gap-2 sm:mx-auto   sm:px-10 md:flex md:px-10 lg:mx-auto lg:mb-2 lg:min-h-[calc(100vh-11rem)] lg:max-w-[1225px]  lg:gap-4 lg:px-16 lg:pb-16 xl:mb-2 xl:px-0 ">
         <div className="mt-16  flex  animate-animateOnOpen flex-col  ">
           <p className="mb-4 tracking-[0.02em] text-yellow-normal">BIENVENUE</p>
           {/* shape sombra mobile

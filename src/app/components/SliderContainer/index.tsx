@@ -24,9 +24,9 @@ export function SliderContainer({ children, depositions }: CarouselProps) {
         {children.map((child, index) => (
           <div
             key={index}
-            className={`embla__slide  flex  min-w-[296px] items-center justify-center  overflow-hidden rounded-md border-2 border-solid border-gray-700  ${
+            className={`embla__slide  flex  min-w-[296px] items-center justify-center  overflow-hidden rounded-md border border-solid border-gray-800  ${
               depositions
-                ? "min-h-[296px] bg-background-dark-900"
+                ? "min-h-[296px] bg-background-dark-700"
                 : "h-[480px] min-h-[480px] bg-background-dark-800"
             }  `}
           >

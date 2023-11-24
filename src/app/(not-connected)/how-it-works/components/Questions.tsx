@@ -1,4 +1,4 @@
-import { Info } from "@/app/(not-connected)/Home/components/Depositions/components/Info"
+import { Info } from "@/app/(not-connected)/(Home)/components/Depositions/components/Info"
 import { AccordionQuestions } from "./AccordionQuestions"
 import { AccordionItems } from "./AccordionItem"
 
