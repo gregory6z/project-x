@@ -18,16 +18,16 @@ export function SliderContainer({ children, depositions }: CarouselProps) {
   return (
     <div className="embla flex w-full flex-col gap-4" ref={emblaRef}>
       <MotionCascade
-        delay={1}
+        delay={2}
         className="embla__container flex cursor-grab gap-4"
       >
         {children.map((child, index) => (
           <div
             key={index}
-            className={`embla__slide  flex  min-w-[296px] items-center justify-center  overflow-hidden rounded-md border border-solid border-gray-800  ${
+            className={`embla__slide  flex   items-center justify-center  overflow-hidden rounded-md border border-solid border-gray-800  ${
               depositions
-                ? "min-h-[296px] bg-background-dark-700"
-                : "h-[480px] min-h-[480px] bg-background-dark-800"
+                ? ", min-h-[296px] min-w-[500px] bg-background-dark-700"
+                : "bg-background-dark-800, h-[480px] min-h-[480px] min-w-[296px]"
             }  `}
           >
             {child}

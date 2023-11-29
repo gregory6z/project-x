@@ -17,7 +17,7 @@ export default function SignUpClerk() {
           <div className="w-full animate-animateOnOpen lg:w-[50%]">
             <SignUp
               signInUrl="sign-in"
-              redirectUrl={"/investments"}
+              redirectUrl={"/account/dsadada"}
               appearance={{
                 elements: {
                   card: "w-full h-full p-0  lg:p-10 lg:min-w-[540px] ",

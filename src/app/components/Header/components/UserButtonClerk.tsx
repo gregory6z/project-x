@@ -13,10 +13,10 @@ export function UserButtonClerk() {
       {auth ? (
         <>
           <UserButton
-            signInUrl="/sign-in"
-            afterSwitchSessionUrl="/"
-            afterMultiSessionSingleSignOutUrl="/"
-            afterSignOutUrl="/"
+            signInUrl="sign-in"
+            afterSwitchSessionUrl="sign-in"
+            afterMultiSessionSingleSignOutUrl="sign-in"
+            afterSignOutUrl="sign-in"
           />
         </>
       ) : (

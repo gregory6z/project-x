@@ -1,5 +1,5 @@
 import Image from "next/image"
-import imageCard from "../../../assets/imagem-card-investing.png"
+import imageCard from "../../../assets/boavista.jpg"
 import { Button } from "../../Button"
 import { ProgressBar } from "../../Progress"
 import { TrendingUp } from "lucide-react"
@@ -13,21 +13,20 @@ export function CardInvestiment() {
           <p>Oferta Aberta</p>
         </div>
       </div>
-      <div className="mb-2 flex flex-1  flex-col justify-between gap-4 p-5 text-sm text-gray-100">
+      <div className="mb-2 flex flex-1  flex-col justify-between gap-4 p-5 text-sm text-gray-100/90">
         <div className=" text-xl">
           <strong>Varandas Boas vistas</strong>
         </div>
 
         <div className="flex flex-col gap-1">
           <p>
-            <span className="opacity-90">Rentabilidade:</span>{" "}
+            <span className="">Rentabilidade:</span>{" "}
             <strong>18,04% a.a.</strong>
           </p>
 
           <div className="flex flex-col gap-2">
             <p>
-              <span className="opacity-90">prazo:</span>{" "}
-              <strong>25 meses</strong>
+              <span className="">prazo:</span> <strong>25 meses</strong>
             </p>
           </div>
 

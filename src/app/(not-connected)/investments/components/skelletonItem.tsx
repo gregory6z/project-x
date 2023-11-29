@@ -6,9 +6,7 @@ export function SkelletonItem() {
       <div className=""></div>
 
       <div className="  h-[40%] w-full rounded-t-xl bg-gray-600 ">
-        <div className=" flex h-[280px] w-full  items-center justify-center ">
-          <ImgSkell className="h-40 w-40 opacity-30"></ImgSkell>
-        </div>{" "}
+        <div className=" flex h-[280px] w-full  items-center justify-center "></div>{" "}
         {/* <div className="h-[280px]  w-full  rounded-t-xl bg-gray-600 object-contain opacity-90 xl:object-fill "></div> */}
         {/* <Image
           src={ImgCard}

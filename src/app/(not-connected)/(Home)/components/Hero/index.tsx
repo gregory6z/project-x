@@ -5,6 +5,7 @@ import heroImage from "../../../../assets/img-1.svg"
 import heroImage2 from "../../../../assets/img-2.svg"
 import { MotionFadeElement } from "@/app/components/Framer-motion/motionFade"
 import Link from "next/link"
+import { TextH1Motion, TextMotion } from "@/app/components/Framer-motion/motion"
 
 export async function Hero() {
   await new Promise((resolve) => {
@@ -28,21 +29,41 @@ export async function Hero() {
           <div className="z-0 before:absolute before:right-0 before:top-0 before:z-[1] before:h-[126px] before:w-[142px]  before:rounded-full before:bg-slate-100 before:blur-[180px] lg:hidden lg:break-before-auto"></div>
           shape sombra botao
           <div className="z-0 hidden  before:absolute before:-bottom-[10%] before:left-[8%] before:z-[-1] before:h-[180px] before:w-[180px] before:rounded-full before:bg-gray-900 before:blur-[150px]  lg:block lg:break-before-auto"></div> */}
-
-          <h1
-            className={` z-10	mb-8  w-[100%] break-words   	text-4xl  font-semibold tracking-tight   text-gray-100/90   duration-1000  lg:text-6xl   `}
+          <TextMotion
+            initial={{
+              translateY: "-10%",
+              opacity: 0.3,
+              translateZ: 0,
+              filter: "blur(20px)",
+            }}
+            animate={{ translateY: "0%", opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.5 }}
           >
-            La plateforme d’investissement qui
-            <strong className="  font-semibold text-yellow-normal">
-              {" "}
-              grandit avec vous{" "}
-            </strong>
-          </h1>
+            <h1
+              className={` z-10	mb-8  w-[100%] break-words   	text-4xl  font-semibold tracking-tight   text-gray-100/90   duration-1000  lg:text-6xl   `}
+            >
+              La plateforme d’investissement qui
+              <strong className="  font-semibold text-yellow-normal">
+                {" "}
+                grandit avec vous{" "}
+              </strong>
+            </h1>
+          </TextMotion>
 
-          <p className="mb-10 text-2xl text-gray-100/60 lg:w-[80%]">
-            Découvrez notre plateforme d’investissement et trouvez les
-            meilleures opportunités pour votre profil.
-          </p>
+          <TextMotion
+            initial={{
+              translateY: "-10%",
+              opacity: 0,
+              translateZ: 0,
+            }}
+            animate={{ translateY: "0%", opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <p className="mb-10 text-2xl text-gray-100/60 lg:w-[80%]">
+              Découvrez notre plateforme d’investissement et trouvez les
+              meilleures opportunités pour votre profil.
+            </p>
+          </TextMotion>
           {/* <div className="mt-8 flex animate-animateOnOpen flex-col gap-2 text-lg font-normal text-gray-200  lg:text-2xl">
             <div className="flex flex-row items-center gap-4 ">
               <CheckCircle className="h-8 w-8 text-yellow-normal" />
@@ -77,8 +98,10 @@ export async function Hero() {
         </div>
         <div className=" relative hidden  h-full w-full  md:block lg:flex">
           <div className="w-full ">
-            <MotionFadeElement
-              delay={0.1}
+            <TextMotion
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
               className=" flex h-full flex-1  gap-6     md:px-8 xl:p-0 "
             >
               <Image
@@ -99,7 +122,7 @@ export async function Hero() {
                 placeholder="blur"
                 blurDataURL={"svg-blur-1.png"}
               ></Image>
-            </MotionFadeElement>
+            </TextMotion>
 
             <Image
               className="ml-auto mt-4"
