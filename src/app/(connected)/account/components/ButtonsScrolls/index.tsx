@@ -18,7 +18,7 @@ export function ButtonsScrolls() {
   return (
     <div className="embla w-full " ref={emblaRef}>
       <div className="embla__container  my-6 flex gap-2 lg:ml-20   ">
-        <div className="embla__slide min-w-[80px flex   flex-col items-center gap-3 overflow-hidden  text-center">
+        <div className="embla__slide flex min-w-[80px] flex-col items-center gap-3 overflow-hidden  text-center">
           <button className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-yellow-normal">
             <Plus className="h-6 w-6"></Plus>
           </button>

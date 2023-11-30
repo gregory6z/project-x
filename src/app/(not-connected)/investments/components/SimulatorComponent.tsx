@@ -5,12 +5,11 @@ import { SimulatorForm } from "./SimulatorForm"
 
 export function SimulatorComponent() {
   return (
-    <main className="flex w-full flex-col justify-center gap-16  text-gray-100 ">
+    <main className="flex w-full flex-col justify-center gap-16  text-gray-100/90 ">
       <MotionElement delay={0}>
-        <h1 className="  h1-custom  lg:w-[80%]">
-          Découvrez combien d'argent vous pouvez{" "}
-          <span className="text-yellow-normal">gagner</span> en investissant
-          avec <span className="text-yellow-normal">Paris Inv</span>.
+        <h1 className="  text-2xl font-bold lg:w-[80%]  lg:text-5xl">
+          Découvrez le potentiel financier qui vous attend en investissant avec
+          Paris Inv.
         </h1>
       </MotionElement>
 
@@ -18,8 +17,9 @@ export function SimulatorComponent() {
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="order-2 flex h-full flex-col  gap-6 md:order-none lg:w-[30%]">
             <p className="opacity-70 lg:text-2xl">
-              Opérations achevées ayant rapporté de 14 % à 40 % par an à nos
-              plus de 30 000 investisseurs.
+              Opérations conclues avec succès, offrant des rendements
+              attractifs. Découvrez comment nos stratégies d'investissement
+              peuvent dynamiser vos finances dès maintenant
             </p>
             <div className="h-16 w-full ">
               <Button

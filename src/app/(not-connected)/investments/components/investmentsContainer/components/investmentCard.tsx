@@ -16,7 +16,7 @@ export async function InvestmentCard() {
 
   return (
     <Link href={"investments/dsladsa"}>
-      <div className="flex h-full min-h-[40vh] w-full animate-overlayShow flex-col rounded-xl border-2 border-gray-800 bg-background-dark-900 transition-colors hover:border-yellow-hover">
+      <div className="flex h-full min-h-[40vh] w-full animate-overlayShow flex-col rounded-xl border border-gray-800 bg-background-dark-900 transition-colors hover:border-yellow-hover">
         <div className="h-[40%] w-full rounded-t-xl bg-black">
           <Image
             src={ImgCard}

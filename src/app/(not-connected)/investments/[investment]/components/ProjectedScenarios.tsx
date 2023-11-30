@@ -5,9 +5,9 @@ import imgUpp from "../../../assets/capital_accumulation-removebg-preview.png"
 
 export function ProjectedScenarios() {
   return (
-    <div className=" mx-auto mb-16  flex  h-full w-full grid-cols-2 items-center rounded-xl  border-solid border-gray-700 lg:mb-32 lg:w-[1020px] lg:gap-12 lg:border-2  lg:bg-background-dark-900 lg:p-14">
+    <div className="  mb-16  flex  h-full w-full grid-cols-2 items-center rounded-xl  border-solid border-gray-700 lg:mb-32 lg:gap-12 lg:border-2  lg:bg-background-dark-900 lg:p-14">
       <div className="flex w-full  flex-col ">
-        <h1 className="mb-16 text-2xl text-gray-100 lg:text-5xl">
+        <h1 className="mb-16 text-2xl font-semibold tracking-tight text-gray-100/90 lg:text-4xl">
           Scénarios projetés{" "}
         </h1>
 

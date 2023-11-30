@@ -1,15 +1,17 @@
 export function BenefitsAndRisks() {
   return (
-    <div className="mx-auto mb-16 flex max-w-[980px] flex-col gap-16 lg:mb-20 ">
+    <div className=" mb-16 flex max-w-[780px] flex-col gap-16 lg:mb-20 ">
       <div className="flex flex-col gap-6 text-gray-100">
-        <h1 className="text-2xl text-yellow-active lg:text-5xl">Beneficios</h1>
-        <div className="flex flex-col gap-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-yellow-active lg:text-5xl">
+          Bénéfices Exceptionnels.
+        </h1>
+        <div className="flex flex-col gap-32">
           <div className="flex  flex-col gap-4">
-            <h2 className="text-xl  opacity-90 lg:text-3xl ">
+            <h2 className="text-xl  text-gray-100/90 lg:text-3xl ">
               Croissance Patrimoniale Solide
             </h2>
             <div className="flex flex-col gap-4">
-              <p className="opacity-60    lg:text-xl">
+              <p className="text-gray-100/60    lg:text-xl">
                 Investir sur le marché financier offre aux investisseurs
                 l'opportunité d'une croissance patrimoniale solide et à long
                 terme. Les actions sont un moyen puissant d'accumuler de la
@@ -34,11 +36,11 @@ export function BenefitsAndRisks() {
           </div>
 
           <div className="flex  flex-col gap-4">
-            <h2 className="text-xl  opacity-90 lg:text-3xl ">
+            <h2 className="text-xl  text-gray-100/90 lg:text-3xl ">
               Gains de Revenu Passif grâce aux Dividendes
             </h2>
             <div className="flex flex-col gap-4">
-              <p className="opacity-60    lg:text-xl">
+              <p className="text-gray-100/60    lg:text-xl">
                 Investir en actions ne se limite pas uniquement à la croissance
                 du capital. De nombreuses entreprises versent des dividendes à
                 leurs actionnaires, offrant ainsi une source de revenu passif.
@@ -60,11 +62,11 @@ export function BenefitsAndRisks() {
           </div>
 
           <div className="flex  flex-col gap-4">
-            <h2 className="text-xl  opacity-90 lg:text-3xl ">
+            <h2 className="text-xl  text-gray-100/90 lg:text-3xl ">
               Diversification et Réduction des Risques
             </h2>
             <div className="flex flex-col gap-4">
-              <p className="opacity-60    lg:text-xl">
+              <p className="text-gray-100/60    lg:text-xl">
                 La diversification est un principe fondamental de la gestion de
                 portefeuille. Investir dans une variété d'actions issues de
                 secteurs différents permet de répartir les risques. En d'autres
@@ -89,11 +91,11 @@ export function BenefitsAndRisks() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 text-gray-100">
-        <h1 className="text-2xl opacity-90 lg:text-5xl">Risques</h1>
-        <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 text-gray-100">
+        <h1 className="text-2xl text-gray-100/90 lg:text-5xl">Risques</h1>
+        <div className="flex flex-col gap-16">
           <div className="flex  flex-col gap-4">
-            <h2 className="text-xl  opacity-90 lg:text-3xl ">
+            <h2 className="text-xl  text-gray-100/90 lg:text-3xl ">
               Fluctuations à Court Terme
             </h2>
             <div className="flex flex-col ">
@@ -108,7 +110,7 @@ export function BenefitsAndRisks() {
           </div>
 
           <div className="flex  flex-col gap-4">
-            <h2 className="text-xl  opacity-90 lg:text-3xl ">
+            <h2 className="text-xl  text-gray-100/90 lg:text-3xl ">
               Risque lié aux Entreprises Individuelles
             </h2>
             <div className="flex flex-col ">

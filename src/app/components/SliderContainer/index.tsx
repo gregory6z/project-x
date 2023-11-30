@@ -26,7 +26,7 @@ export function SliderContainer({ children, depositions }: CarouselProps) {
             key={index}
             className={`embla__slide  flex   items-center justify-center  overflow-hidden rounded-md border border-solid border-gray-800  ${
               depositions
-                ? ", min-h-[296px] min-w-[500px] bg-background-dark-700"
+                ? ", min-h-[296px] min-w-[296px] bg-background-dark-700 lg:min-w-[500px]"
                 : "bg-background-dark-800, h-[480px] min-h-[480px] min-w-[296px]"
             }  `}
           >

@@ -16,14 +16,14 @@ export async function Hero() {
 
   const user = await response.json
   return (
-    <main className=" z-1 flex w-full border-b border-solid border-gray-800     bg-[url('/dark.png')] bg-cover  md:flex lg:items-center ">
+    <main className=" z-1 flex  w-full border-b border-solid  border-gray-800    bg-[url('/dark.png')] bg-cover  md:flex lg:items-center ">
       {/* shape sombra esquerda
       <div className=" z-0 hidden before:absolute before:-top-2 before:left-0 before:z-[1] before:h-[180px] before:w-[180px]  before:rounded-full before:bg-slate-100 before:blur-[180px] lg:block lg:h-[calc(100vh-5rem)] lg:break-before-auto"></div>
       shape sombra direita imagem
       <div className=" z-0 hidden  before:absolute before:right-[30%] before:top-[30%] before:z-[1]  before:h-[180px] before:w-[180px] before:rounded-full before:bg-gray-100 before:blur-[150px]  lg:block lg:break-before-auto"></div> */}
 
-      <div className=" z-[0] mx-[1.25rem] mb-[8rem] mt-[6rem] flex h-full  justify-between  gap-2 sm:mx-auto   sm:px-10 md:flex md:px-10 lg:mx-auto lg:mb-2 lg:min-h-[calc(100vh-11rem)] lg:max-w-[1225px]  lg:gap-4 lg:px-16 lg:pb-16 xl:mb-2 xl:px-0 ">
-        <div className="mt-16  flex  animate-animateOnOpen flex-col  ">
+      <div className=" z-[0] mx-[1.25rem] mb-[6rem] flex h-full w-full justify-between gap-2 sm:mx-auto sm:px-10  md:flex  md:px-10   lg:mx-auto lg:mb-[0rem] lg:mt-[6rem] lg:min-h-[calc(100vh-11rem)] lg:max-w-[1225px] lg:gap-4  lg:px-16 xl:mb-2 xl:px-0 xl:pb-16 ">
+        <div className="relative  mt-16  flex animate-animateOnOpen flex-col  ">
           <p className="mb-4 tracking-[0.02em] text-yellow-normal">BIENVENUE</p>
           {/* shape sombra mobile
           <div className="z-0 before:absolute before:right-0 before:top-0 before:z-[1] before:h-[126px] before:w-[142px]  before:rounded-full before:bg-slate-100 before:blur-[180px] lg:hidden lg:break-before-auto"></div>
@@ -83,15 +83,18 @@ export async function Hero() {
             </div>
           </div> */}
 
-          <button className="  flex w-[500px] items-center justify-center gap-2 rounded-lg bg-yellow-normal/90 px-2 py-6 text-xl font-semibold   tracking-tight text-gray-900">
+          <button className=" flex items-center justify-center gap-2 rounded-lg bg-yellow-normal/90 px-[1.125rem] py-4 text-xl font-semibold tracking-tight text-gray-900 lg:w-[500px]   lg:px-2 lg:py-6">
             Investissez maintenant. C’est simple et rentable.
-            <LineChart strokeWidth={2.5} className=""></LineChart>
+            <LineChart
+              strokeWidth={2.5}
+              className="hidden lg:block"
+            ></LineChart>
           </button>
 
           <Image
-            className="absolute mt-4  lg:hidden"
+            className=" mt-4  lg:hidden"
             src="starGoogle.svg"
-            width="200"
+            width="250"
             height="30"
             alt="logo"
           ></Image>

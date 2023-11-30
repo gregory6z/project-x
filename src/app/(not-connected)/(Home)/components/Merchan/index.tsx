@@ -12,16 +12,16 @@ import { MotionElement } from "@/app/components/Framer-motion/motion"
 export function Merchan() {
   return (
     <div className="flex w-full flex-col bg-background-dark-900 lg:h-full ">
-      <div className="mx-auto mt-40 max-w-[1140px] ">
-        <div className="mx-auto  flex max-w-[72%] flex-col gap-6">
+      <div className="mx-auto mt-20 px-8 lg:mt-40 lg:max-w-[1140px] lg:px-8 xl:px-0">
+        <div className="mx-auto  flex flex-col gap-6 lg:max-w-[72%] ">
           <MotionElement>
-            <h1 className="text-center font-semibold tracking-tight text-gray-100/90  lg:mx-auto lg:text-4xl">
+            <h1 className=" text-center text-2xl font-semibold tracking-tight text-gray-100/90  lg:mx-auto lg:text-4xl">
               Pourquoi Paris Investissement a-t-il été spécifiquement élaboré
               pour vous?
             </h1>
           </MotionElement>
           <MotionElement delay={0.25}>
-            <p className=" mx-auto max-w-[60%] text-center text-lg text-gray-100/60">
+            <p className=" text-center text-gray-100/60 lg:mx-auto  lg:max-w-[60%] lg:text-lg">
               Chez Paris Investissements, nous investissons dans votre avenir.
               Faites travailler votre argent pour vous. Investissez aujourd'hui,
               récoltez demain.
@@ -38,8 +38,8 @@ export function Merchan() {
             ></Image> */}
           </button>
         </div>{" "}
-        <div className="relative   mt-16 grid gap-4 rounded-lg lg:grid-cols-4 ">
-          <div className=" absolute -bottom-[30%] left-[40%] h-72  w-72 rounded-full bg-yellow-100/60 blur-[300px]"></div>
+        <div className="relative mt-16  grid gap-7 rounded-lg sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 ">
+          <div className=" absolute -bottom-[30%] left-[40%] hidden h-72 w-72  rounded-full bg-yellow-100/60 blur-[300px] lg:block"></div>
 
           <MerchanCard
             icon={ShieldCheck}

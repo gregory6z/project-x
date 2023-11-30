@@ -9,7 +9,7 @@ import { AccordionContainer } from "./AccordionContainer"
 export function AccordionQuestions() {
   return (
     <Accordion.Root
-      className="  mx-auto my-16 h-full w-full rounded-md opacity-90 lg:w-full lg:max-w-[980px] "
+      className="  mx-auto my-16 h-full w-full rounded-md opacity-90 lg:w-full lg:max-w-[800px] "
       type="single"
       collapsible
     >
