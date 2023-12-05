@@ -3,7 +3,7 @@ import { TextMotion } from "@/app/components/Framer-motion/motion"
 export function Banner() {
   return (
     <div className=" border-theme border-custom  flex h-full w-full bg-background-dark-900 lg:min-h-[calc(100vh+5rem)]">
-      <div className="responsive-container w-full  flex-col gap-4 py-16  lg:mb-16 lg:justify-center  lg:py-20">
+      <div className="responsive-container w-full  flex-col gap-4 py-16  lg:mb-16 lg:justify-center  lg:py-24">
         <TextMotion
           initial={{
             translateY: "-10%",
@@ -14,7 +14,7 @@ export function Banner() {
           animate={{ translateY: "0%", opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl font-extrabold tracking-tight text-gray-100/90 lg:w-[60%] lg:text-5xl">
+          <h1 className="mx-auto text-center text-2xl font-extrabold tracking-tight text-gray-100/90 lg:w-[60%] lg:text-5xl">
             Comment ça fonctionne et pourquoi devriez-vous commencer à investir
             dès maintenant ?
           </h1>
@@ -29,7 +29,7 @@ export function Banner() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           {" "}
-          <p className="text-gray-100/60 lg:w-[70%] lg:text-xl">
+          <p className="mx-auto text-center text-gray-100/60 lg:w-[70%] lg:text-xl">
             Investir en toute sécurité est notre priorité ! Découvrez la
             garantie derrière nos investissements et comprenez le fonctionnement
             novateur de notre entreprise. Nous sommes là pour transformer votre
@@ -37,7 +37,7 @@ export function Banner() {
           </p>
         </TextMotion>
 
-        <div className="mt-8 grid animate-animateOnOpen grid-cols-1 gap-8  delay-200  md:grid-cols-2 ">
+        <div className="mt-8 grid animate-animateOnOpen grid-cols-1 gap-4  delay-200  md:grid-cols-2 ">
           <div className="flex flex-col  gap-5 rounded-r-lg  border border-l-2  border-solid border-gray-800  border-l-yellow-active bg-background-dark-800 p-4 lg:gap-4  lg:p-8">
             <p className="text-xl font-semibold  tracking-tight text-gray-100/90 lg:text-2xl ">
               <span className="mr-4  text-yellow-normal">1.</span>

@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Gift } from "lucide-react"
 import { AccountInformation } from "../components/AccountInformation"
 import { ButtonsScrolls } from "../components/ButtonsScrolls"
 import { HighlightedFundraising } from "../components/HighlightedFundraising"
@@ -18,27 +18,56 @@ export default function Account() {
 
           <HighlightedFundraising />
         </div>
-        <div className="mx-auto my-12 mb-[8rem] h-[10rem] w-full rounded-lg  bg-background-dark-700 p-4 lg:my-0    lg:mb-0 lg:p-8 ">
-          <div className=" flex items-center justify-between">
-            <p className=" text-2xl text-green-400">Indique e ganhe</p>
+        <div className="mx-auto my-12 mb-[8rem] h-full  w-full rounded-lg  border-green-400/90 bg-background-dark-700 p-4  lg:my-0 lg:mb-0 lg:max-h-[12rem]     lg:p-8 ">
+          <header className=" mx-auto flex justify-between   ">
+            <p className=" text-3xl text-green-400 ">Parrainage</p>
             <ChevronRight className="text-green-400" />
-          </div>
-          <div className="flex gap-12">
-            <p className="ml-10 mt-4 text-gray-100/70">
-              Cada pessoa que indicar a investir:
-            </p>
-            <div className="flex h-full gap-4 border border-solid border-green-400 p-4 text-gray-100">
-              <div>
-                {/* <Image
-                  src={presenteImg}
-                  width={50}
-                  height={50}
-                  alt={""}
-                  className=""
-                ></Image> */}
+          </header>
+
+          <div className="  flex  flex-col gap-2 text-xl lg:flex-row lg:items-center   lg:gap-10   ">
+            <p className="   mt-4  text-gray-100/70 lg:mt-0 lg:text-xl">
+              Chaque persone que investir:{" "}
+            </p>{" "}
+            <div className=" flex  flex-col lg:mb-6  lg:mr-24 lg:flex-row lg:gap-10">
+              <div className=" ml-8 flex flex-col justify-center lg:ml-0">
+                <p className=" block text-5xl font-semibold text-green-400/90">
+                  50€
+                </p>{" "}
+                <p className=" text-lg font-semibold tracking-tight text-gray-100/90 lg:text-2xl ">
+                  Pour vous
+                </p>{" "}
               </div>
-              {/* <p>aqui</p>
-              <p>aqui</p> */}
+              <div className=" ml-8 flex flex-col justify-center   lg:ml-0">
+                <p className=" block text-5xl font-semibold text-green-400/90 lg:text-5xl">
+                  50€
+                </p>
+                <p className=" text-lg font-semibold tracking-tight  text-gray-100/90 lg:text-2xl ">
+                  Pour votre fuieille
+                </p>{" "}
+              </div>
+            </div>
+            <div className="mb-4 flex items-center justify-center">
+              <Image
+                className=""
+                src={"/gift.png"}
+                width={80}
+                height={80}
+                alt={""}
+              ></Image>
+              <Image
+                className=" "
+                src={"/gift.png"}
+                width={80}
+                height={80}
+                alt={""}
+              ></Image>
+              <Image
+                className=" "
+                src={"/gift.png"}
+                width={80}
+                height={80}
+                alt={""}
+              ></Image>
             </div>
           </div>
         </div>
