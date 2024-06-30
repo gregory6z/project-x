@@ -21,7 +21,7 @@ export function Footer() {
                 Comment ça marche
               </Link>
               <Link href={"#"} className="block opacity-70">
-                Offres d'investissement
+                Procédures
               </Link>
             </div>
 
@@ -41,6 +41,12 @@ export function Footer() {
               </Link>
             </div>
 
+            <div className="flex flex-col gap-2">
+              <h1 className="font-bold">Questions</h1>
+              <Link href={"#"} className="block opacity-70">
+                Foire aux questions FAQ
+              </Link>
+            </div>
             <div className="flex flex-col gap-2">
               <h1 className="font-bold">Questions</h1>
               <Link href={"#"} className="block opacity-70">

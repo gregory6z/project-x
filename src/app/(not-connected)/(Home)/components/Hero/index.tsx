@@ -1,11 +1,9 @@
-import { Button } from "@/app/components/Button"
-import { CheckCircle, LineChart } from "lucide-react"
+import { LineChart } from "lucide-react"
 import Image from "next/image"
 import heroImage from "../../../../assets/img-1.svg"
 import heroImage2 from "../../../../assets/img-2.svg"
-import { MotionFadeElement } from "@/app/components/Framer-motion/motionFade"
-import Link from "next/link"
-import { TextH1Motion, TextMotion } from "@/app/components/Framer-motion/motion"
+
+import { TextMotion } from "@/app/components/Framer-motion/motion"
 
 export async function Hero() {
   await new Promise((resolve) => {
@@ -15,6 +13,7 @@ export async function Hero() {
   const response = await fetch("http://api.github.com/users/gregory6z")
 
   const user = await response.json
+
   return (
     <main className=" z-1 flex  w-full border-b border-solid  border-gray-800    bg-[url('/dark.png')] bg-cover  md:flex lg:items-center ">
       {/* shape sombra esquerda
@@ -25,10 +24,7 @@ export async function Hero() {
       <div className=" z-[0] mx-[1.25rem] mb-[6rem] flex h-full w-full justify-between gap-2 sm:mx-auto sm:px-10  md:flex  md:px-10   lg:mx-auto lg:mb-[0rem] lg:mt-[6rem] lg:min-h-[calc(100vh-11rem)] lg:max-w-[1225px] lg:gap-4  lg:px-16 xl:mb-2 xl:px-0 xl:pb-16 ">
         <div className="relative  mt-16  flex animate-animateOnOpen flex-col  ">
           <p className="mb-4 tracking-[0.02em] text-yellow-normal">BIENVENUE</p>
-          {/* shape sombra mobile
-          <div className="z-0 before:absolute before:right-0 before:top-0 before:z-[1] before:h-[126px] before:w-[142px]  before:rounded-full before:bg-slate-100 before:blur-[180px] lg:hidden lg:break-before-auto"></div>
-          shape sombra botao
-          <div className="z-0 hidden  before:absolute before:-bottom-[10%] before:left-[8%] before:z-[-1] before:h-[180px] before:w-[180px] before:rounded-full before:bg-gray-900 before:blur-[150px]  lg:block lg:break-before-auto"></div> */}
+
           <TextMotion
             initial={{
               translateY: "-10%",
@@ -83,8 +79,9 @@ export async function Hero() {
             </div>
           </div> */}
 
-          <button className=" flex items-center justify-center gap-2 rounded-lg bg-yellow-normal/90 px-[1.125rem] py-4 text-xl font-semibold tracking-tight text-gray-900 lg:w-[500px]   lg:px-2 lg:py-6">
-            Investissez maintenant. C’est simple et rentable.
+          <button className=" flex items-center justify-center gap-2 rounded-lg bg-yellow-normal/90 px-[1.125rem] py-4 text-lg font-semibold tracking-tight text-gray-900 lg:w-[500px] lg:px-2   lg:py-6 lg:text-xl">
+            Investissez maintenant.{" "}
+            <span className="hidden lg:block">C’est simple et rentable.</span>
             <LineChart
               strokeWidth={2.5}
               className="hidden lg:block"
@@ -100,7 +97,7 @@ export async function Hero() {
           ></Image>
         </div>
         <div className=" relative hidden  h-full w-full  md:block lg:flex">
-          <div className="w-full ">
+          <div className="h-full w-full ">
             <TextMotion
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -111,7 +108,7 @@ export async function Hero() {
                 className="rounded-[30px]  border-4  border-solid border-gray-800  object-cover md:max-w-[50%] xl:max-w-[100%]    "
                 src={heroImage}
                 priority
-                width={280}
+                width={260}
                 alt={""}
                 placeholder="blur"
                 blurDataURL={"svg-blur-1.png"}
@@ -120,7 +117,7 @@ export async function Hero() {
                 className="rounded-[30px]  border-4 border-solid border-gray-800 object-cover md:max-w-[50%] "
                 src={heroImage2}
                 priority
-                width={280}
+                width={260}
                 alt={""}
                 placeholder="blur"
                 blurDataURL={"svg-blur-1.png"}
