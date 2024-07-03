@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${roboto.className} bg-background-dark-800   `}>
+      <body className={`${roboto.className} dark bg-background-dark-800  `}>
         <ClerkProvider
           localization={frFR}
           appearance={{

@@ -1,81 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
 
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
 
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
 
+      --primary: 46, 99%, 62%;
+      --primary-foreground: 240, 7%, 5%;
 
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
 
-body, input , textarea, button {
-    font-weight: 400;
-    /* line-height: "160%"; */
-    text-rendering: optimizeLegibility;
-    -webkit-font-smothing:antialiased;
-    
-}
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
 
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
 
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
 
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
 
+      --radius: 0.5rem;
+    }
 
-.DialogContent {
-    animation: slide-in 0.5s ease-in-out;
-    transform: translateX(-100%);
-}
+    .dark {
+      --background: 240, 5%, 7%;
+      --foreground: 0 0% 95%;
 
-.animate-final-state {
-    opacity: 1; /* Garanta que o elemento permaneça visível */
-    transform: translateY(0); /* Garanta que o elemento permaneça na posição final */
+      --card: 240, 7%, 5%;
+      --card-foreground: 0 0% 95%;
+
+      --popover: 0 0% 3.9%;
+      --popover-foreground: 0 0% 98%;
+
+      --primary: 	46, 78%, 57%;
+      --primary-foreground: 240, 5%, 7%;
+
+      --secondary: 0 0% 14.9%;
+      --secondary-foreground: 0 0% 98%;
+
+      --muted: 0 0% 14.9%;
+      --muted-foreground: 0 0% 63.9%;
+
+      --accent: 0 0% 14.9%;
+      --accent-foreground: 0 0% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+
+      --border: 0 0% 14.9%;
+      --input: 0 0% 40%;
+      --ring: 46, 99%, 62%;
+    }
   }
 
-  @layer components {
-    .responsive-container {
-        @apply flex px-[1.25rem] md:px-10 lg:mx-auto lg:max-w-[1225px] lg:px-16 xl:px-0 xl:mx-auto
+  @layer base {
+    * {
+      @apply border-border;
     }
-
-    .delayed-animation {
-        animation-delay: 0.5s; /* Adicione o atraso desejado em segundos */
-      }
-
-    .h1-custom {
-        @apply text-3xl text-gray-100 lg:text-6xl
+    body {
+      @apply bg-background text-foreground;
     }
-
-    /* Focar o botão com um teclado mostrará uma linha VERMELHA tracejada. */
-
-
-    .border-custom {
-        @apply border-b border-solid border-gray-800
-    }
-
-    .link:focus {
-        outline: 2px solid yellow; /* Define a cor amarela desejada para a borda de foco */
-        outline-offset: 2px; /* Espaço entre o texto e a borda de foco */
-      }
-
-    .skelleton-item {
-        @apply  relative  overflow-hidden bg-gradient-to-r from-transparent
-        via-gray-800
-        to-transparent
-        shadow-md
-        /* shadow-gray-100/20 */
-        before:absolute
-        before:inset-0
-        before:-translate-x-full before:animate-[shimmer_1300ms_infinite]
-        /* before:border-t-4 before:border-gray-100/20 */
-        before:bg-gradient-to-r before:from-transparent before:via-gray-200/10  before:to-transparent
-    }
-
-
-    
   }
-
-
-
-
-
-
-
-
-   

@@ -1,4 +1,4 @@
-import { RedirectToSignIn, SignUp } from "@clerk/nextjs"
+import { SignUp } from "@clerk/nextjs"
 import Image from "next/image"
 
 import signInImg from "../../assets/login.svg"
