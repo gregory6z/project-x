@@ -58,11 +58,11 @@ export async function InvestmentCard() {
               <ProgressBar />
             </div>
           </main>
-          <Button
+          {/* <Button
             text="Investir"
             variant="md"
             className="mt-auto  py-4  "
-          ></Button>
+          ></Button> */}
         </div>
       </div>
     </Link>

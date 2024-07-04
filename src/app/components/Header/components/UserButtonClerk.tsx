@@ -24,7 +24,7 @@ export function UserButtonClerk() {
           <Link href={"/sign-in"} className="text-gray-100">
             Connecter
           </Link>
-          <Button text="Devenez un investisseur" className="" variant="sm" />
+          {/* <Button text="Devenez un investisseur" className="" variant="sm" /> */}
         </div>
       )}
     </div>

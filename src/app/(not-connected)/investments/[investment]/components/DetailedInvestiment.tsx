@@ -20,11 +20,11 @@ export default function Investiment() {
           </div>
 
           <div className="flex flex-col gap-4 md:flex-row">
-            <Button variant="secondary" text="Lamina tecnica"></Button>
-            <Button
+            {/* <Button variant="secondary" text="Lamina tecnica"></Button> */}
+            {/* <Button
               className="h-12 bg-yellow-normal lg:h-16 lg:text-xl"
               text={"Investir"}
-            ></Button>
+            ></Button> */}
           </div>
         </div>
 

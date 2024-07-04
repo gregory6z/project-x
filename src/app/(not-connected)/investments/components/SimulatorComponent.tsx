@@ -22,10 +22,10 @@ export function SimulatorComponent() {
               peuvent dynamiser vos finances dès maintenant
             </p>
             <div className="h-16 w-full ">
-              <Button
+              {/* <Button
                 className=" h-full w-full  "
                 text={" Devenez un investisseur"}
-              ></Button>
+              ></Button> */}
             </div>
           </div>
           <div className="rounded-xl border-2 border-gray-700 bg-background-dark-900 p-8 lg:w-[70%]">

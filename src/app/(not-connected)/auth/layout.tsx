@@ -2,12 +2,17 @@ import { MotionFadeElement } from "@/app/components/Framer-motion/motionFade"
 import Image from "next/image"
 import signInImg from "../../assets/login.svg"
 import { Header } from "@/app/components/Header"
+import { isAuthenticated } from "@/auth/auth"
+import { redirect } from "next/navigation"
 
-export default function NotConnectedLayout({
+export default async function AuthLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  if(isAuthenticated()){
+    redirect("/")
+  }
   return (
     <>
       <Header></Header>
@@ -21,7 +26,7 @@ export default function NotConnectedLayout({
               <Image
                 src={signInImg}
                 alt={""}
-                className=" mt-10 w-[260px] lg:block lg:w-[560px] "
+                className=" mt-4 w-[220px] lg:block lg:w-[560px] "
                 blurDataURL={signInImg}
               ></Image>
             </MotionFadeElement>

@@ -44,7 +44,7 @@ export function CardInvestiment() {
           </div>
           <ProgressBar></ProgressBar>
         </div>
-        <Button variant="md" className="   " text={` Savoir plus `}></Button>
+        {/* <Button variant="md" className="   " text={` Savoir plus `}></Button> */}
       </div>
     </div>
   )

@@ -12,9 +12,9 @@ export function ProjectedScenarios() {
         </h1>
 
         <div className="flex gap-2   ">
-          <Button text="Optimiste"></Button>
+          {/* <Button text="Optimiste"></Button>
           <Button variant="secondary" text="Base"></Button>
-          <Button variant="secondary" text="Pessimiste"></Button>
+          <Button variant="secondary" text="Pessimiste"></Button> */}
         </div>
         <div className="mt-8 flex flex-col gap-4 opacity-70  lg:text-2xl  ">
           <div className="border-custom flex justify-between text-gray-100 ">

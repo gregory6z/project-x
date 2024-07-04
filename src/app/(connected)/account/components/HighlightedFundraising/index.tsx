@@ -31,7 +31,7 @@ export function HighlightedFundraising() {
         </div>
       </div>
 
-      <Button text={"Investir"} variant="md" className="mt-6"></Button>
+      {/* <Button text={"Investir"} variant="md" className="mt-6"></Button> */}
     </div>
   )
 }
