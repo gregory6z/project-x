@@ -5,13 +5,14 @@ import { Header } from "@/app/components/Header"
 import { isAuthenticated } from "@/auth/auth"
 import { redirect } from "next/navigation"
 
+
 export default async function AuthLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  if(isAuthenticated()){
-    redirect("/")
+  if (isAuthenticated()) {
+    redirect("/") 
   }
   return (
     <>

@@ -74,3 +74,33 @@
       @apply bg-background text-foreground;
     }
   }
+
+/* Para Chrome */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Para Edge */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+/* Para Firefox, uma abordagem geral seria ocultar a seta, mas isso também remove a capacidade do usuário de limpar o campo */
+input[type="date"]::-moz-clear {
+  display: none;
+}
+    /* Para Chrome */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Para Edge */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+/* Para Firefox, uma abordagem geral seria ocultar a seta, mas isso também remove a capacidade do usuário de limpar o campo */
+input[type="date"]::-moz-clear {
+  display: none;
+}
+  

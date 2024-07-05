@@ -1,6 +1,6 @@
 "use server"
 
-import { signInWithPassword } from "@/http/sign-in-with-passoword"
+import { signInWithPassword } from "@/http/sign-in-with-password"
 import * as ky from "ky"
 
 import { cookies } from "next/headers"
@@ -53,5 +53,5 @@ export async function signInWithEmailAndPassword(data: FormData) {
     }
   }
 
-  return { success: true, message: null, errors: null }
+  return { success: true, message: "Connected", errors: null }
 }

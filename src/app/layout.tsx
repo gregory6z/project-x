@@ -13,6 +13,8 @@ import { twMerge } from "tailwind-merge"
 
 import Loading from "./loading"
 import ScrollToTopOnMount from "./components/ScrollTop"
+import { toast, Toaster } from "sonner"
+import { isAuthenticated } from "@/auth/auth"
 
 export const metadata = {
   title: "PARIS INVEST | HOME",
@@ -26,11 +28,12 @@ const roboto = Roboto({
   display: "swap",
 })
 
-export default function RootLayout({
+export  default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="fr">
       <body className={`${roboto.className} dark bg-background-dark-800  `}>
@@ -73,6 +76,8 @@ export default function RootLayout({
           }}
         >
           <ScrollToTopOnMount>
+            <Toaster richColors className="mb-10 lg:mb-10" duration={1500} />
+
             <Suspense fallback={<Loading />}>{children}</Suspense>
           </ScrollToTopOnMount>
         </ClerkProvider>

@@ -6,10 +6,10 @@ import {
   CardTitle,
 } from "@/app/components/Card"
 
-import { SignInForm } from "./sign-in-form"
+import { ForgotPasswordForm } from "./sign-in-form"
 import Link from "next/link"
 
-export default function SignIn() {
+export default function ForgotPassword() {
   return (
     <Card className=" w-full lg:w-[540px]  lg:min-w-[540px]">
       <CardHeader>
@@ -19,10 +19,10 @@ export default function SignIn() {
         </CardDescription>
       </CardHeader>
 
-      <SignInForm></SignInForm>
+      <ForgotPasswordForm></ForgotPasswordForm>
 
       <CardFooter className="flex w-full flex-col ">
-        <p className=" text-pretty text-foreground/60">
+      <p className=" text-pretty text-foreground/60">
           Vous n'avez pas de compte ? Cliquez ici pour {" "}
           <Link
             href={"/auth/sign-out"}
