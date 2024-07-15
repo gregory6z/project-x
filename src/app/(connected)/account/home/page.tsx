@@ -1,14 +1,10 @@
-import { ChevronRight, Gift } from "lucide-react"
+import { auth } from "@/auth/auth"
 import { AccountInformation } from "../components/AccountInformation"
-import { ButtonsScrolls } from "../components/ButtonsScrolls"
 import { HighlightedFundraising } from "../components/HighlightedFundraising"
-import Image from "next/image"
 
-import presenteImg from "../../../assets/presente.png"
-
-export default function Account() {
+export default async function Home() {
   return (
-    <div className="responsive-container flex overflow-hidden ">
+    <div className=" mx-auto flex max-w-[1280px] overflow-hidden ">
       <div className=" mt-2 flex w-full flex-col lg:h-[calc(100vh-10rem)] lg:justify-center  ">
         <h1 className="my-4 text-3xl text-gray-100 lg:my-8  lg:text-4xl">
           Accueil
@@ -18,7 +14,7 @@ export default function Account() {
 
           <HighlightedFundraising />
         </div>
-        <div className="mx-auto my-12 mb-[8rem] h-full  w-full rounded-lg  border-green-400/90 bg-background-dark-700 p-4  lg:my-0 lg:mb-0 lg:max-h-[12rem]     lg:p-8 ">
+        {/* <div className="mx-auto my-12 mb-[8rem] h-full  w-full rounded-lg  border-green-400/90 bg-background-dark-700 p-4  lg:my-0 lg:mb-0 lg:max-h-[12rem]     lg:p-8 ">
           <header className=" mx-auto flex justify-between   ">
             <p className=" text-3xl text-green-400 ">Parrainage</p>
             <ChevronRight className="text-green-400" />
@@ -70,7 +66,7 @@ export default function Account() {
               ></Image>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

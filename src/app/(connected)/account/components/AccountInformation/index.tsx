@@ -1,8 +1,19 @@
 import { ChevronRight } from "lucide-react"
 import { ButtonsScrolls } from "../ButtonsScrolls"
-import { HighlightedFundraising } from "../HighlightedFundraising"
+import { auth } from "@/auth/auth"
 
-export function AccountInformation() {
+export async function AccountInformation() {
+  const { bankAccount } = await auth()
+
+  function formatCurrency(value: number) {
+    return new Intl.NumberFormat("fr", {
+      style: "currency",
+      currency: "EUR",
+    }).format(value)
+  }
+
+  const formattedBankAccountBalance = formatCurrency(bankAccount.balance)
+
   return (
     <div className="flex flex-1 flex-col ">
       <div className="flex h-full w-full   flex-col gap-2 rounded-xl border-2 border-solid border-yellow-normal bg-yellow-normal/30 p-4 tracking-wide ">
@@ -10,7 +21,9 @@ export function AccountInformation() {
           <p className="text-lg  font-bold text-gray-100">Compte courant</p>
           <ChevronRight className="text-gray-100" />
         </div>
-        <p className="text-3xl font-semibold text-yellow-normal">€ 50.000,00</p>
+        <p className="text-3xl font-semibold text-yellow-normal">
+          € {formattedBankAccountBalance}
+        </p>
         <div className="flex flex-col gap-1">
           <div className="flex items-center justify-between">
             <p className="text-lg  font-bold text-gray-100">

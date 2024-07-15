@@ -22,7 +22,7 @@ export function HeaderContent() {
         <Link href="/how-it-works" className="text-gray-100">
           Comment ça marche
         </Link>
-        <Link href="/sign-up" className="text-gray-100">
+        <Link href="/auth/sign-in" className="text-gray-100">
           Connecter
         </Link>
       </div>

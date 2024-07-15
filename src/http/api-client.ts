@@ -14,6 +14,7 @@ export const api = ky.create({
 
           cookieStore = serverCookies
         }
+
         const token = getCookie("ProjectX:token", { cookies: cookieStore })
 
         if (token) {

@@ -23,7 +23,7 @@ export default function SignIn() {
 
       <CardFooter className="flex w-full flex-col ">
         <p className=" text-pretty text-foreground/60">
-          Vous n'avez pas de compte ? Cliquez ici pour {" "}
+          Vous n'avez pas de compte ? Cliquez ici pour{" "}
           <Link
             href={"/auth/sign-out"}
             className="cursor-pointer text-primary hover:underline"

@@ -20,7 +20,7 @@ export function ButtonsScrolls() {
       <div className="embla__container  my-6 flex gap-2 lg:ml-20   ">
         <div className="embla__slide flex min-w-[80px] flex-col items-center gap-3 overflow-hidden  text-center">
           <button className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-yellow-normal">
-            <Plus className="h-6 w-6"></Plus>
+            <Plus className="h-6 w-6 text-background"></Plus>
           </button>
           <p className="max-w-[80px] text-sm text-gray-100">
             Alimenter mon compte
@@ -29,7 +29,7 @@ export function ButtonsScrolls() {
 
         <div className="embla__slide flex min-w-[80px] flex-col items-center gap-3 overflow-hidden  text-center">
           <button className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-yellow-normal">
-            <AreaChart className="h-6 w-6"></AreaChart>
+            <AreaChart className="h-6 w-6 text-background"></AreaChart>
           </button>
           <p className="max-w-[80px] text-sm text-gray-100">Investir</p>
         </div>

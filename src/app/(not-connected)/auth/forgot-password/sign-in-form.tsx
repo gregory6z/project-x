@@ -7,7 +7,7 @@ import { Label } from "@/app/components/Label"
 import { useRouter } from "next/navigation"
 import { useFormState } from "@/app/hooks/useformState"
 import { Loader2 } from "lucide-react"
-import { signInWithEmailAndPassword } from "./action"
+import { signInWithEmailAndPassword } from "../sign-in/action"
 
 export function ForgotPasswordForm() {
   const router = useRouter()
