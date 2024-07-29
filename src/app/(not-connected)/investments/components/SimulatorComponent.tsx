@@ -1,4 +1,3 @@
-import { Button } from "@/app/components/Button"
 import { MotionElement } from "@/app/components/Framer-motion/motion"
 import { MotionFadeElement } from "@/app/components/Framer-motion/motionFade"
 import { SimulatorForm } from "./SimulatorForm"

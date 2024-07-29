@@ -1,11 +1,12 @@
-import { auth } from "@/auth/auth"
+import { GetUser } from "@/http/get-user"
 import { AccountInformation } from "../components/AccountInformation"
 import { HighlightedFundraising } from "../components/HighlightedFundraising"
+import { useMutation, useQuery } from "@tanstack/react-query"
 
 export default async function Home() {
   return (
-    <div className=" mx-auto flex max-w-[1280px] overflow-hidden ">
-      <div className=" mt-2 flex w-full flex-col lg:h-[calc(100vh-10rem)] lg:justify-center  ">
+    <div className=" mx-auto flex max-w-[1280px] overflow-hidden   ">
+      <div className=" mt-2 flex w-full flex-col px-[1.5rem] lg:h-[calc(100vh-10rem)] lg:justify-center  ">
         <h1 className="my-4 text-3xl text-gray-100 lg:my-8  lg:text-4xl">
           Accueil
         </h1>

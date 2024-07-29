@@ -1,9 +1,8 @@
 import Image from "next/image"
 
-import { ProgressBar } from "@/app/components/Progress"
+// import { ProgressBar } from "@/app/components/Progress"
 import Link from "next/link"
 import { Button } from "@/app/components/Button"
-
 
 interface InvestmentCardProps {
   name: string
@@ -17,19 +16,19 @@ interface InvestmentCardProps {
   //   current: number
   //   numberOfWeeks: number
   // }
-  
 }
 
-
-export async function InvestmentCard({name, term, imageUrl, investmentType, annualProfit,remainingDays}: InvestmentCardProps) {
- 
-
+export async function InvestmentCard({
+  name,
+  term,
+  imageUrl,
+  investmentType,
+  annualProfit,
+  remainingDays,
+}: InvestmentCardProps) {
   function yearsToMonths(years: number): number {
-    return years * 12;
+    return years * 12
   }
-
-
-
 
   return (
     <Link href={"investments/dsladsa"}>
@@ -45,22 +44,21 @@ export async function InvestmentCard({name, term, imageUrl, investmentType, annu
           ></Image>
         </div>
         <div>
-        <p className="mt-1 tracking-widest w-full px-6 bg-yellow-normal text-background">Faltam {remainingDays} dias</p>
-        
+          <p className="mt-1 w-full bg-yellow-normal px-6 tracking-widest text-background">
+            Faltam {remainingDays} dias
+          </p>
         </div>
-       
+
         <div className="flex h-full flex-col p-6  text-gray-100">
           <header>
-            <h1 className="text-lg font-bold lg:text-xl">
-              {name}
-            </h1>
+            <h1 className="text-lg font-bold lg:text-xl">{name}</h1>
           </header>
 
           <main className="mt-6 ">
             <div className="flex flex-col gap-2">
               <div className=" mb-1 flex justify-between text-foreground/60">
                 <p>Période</p>
-                <p className="text-foreground">{ yearsToMonths(term)} mois</p>
+                <p className="text-foreground">{yearsToMonths(term)} mois</p>
               </div>
               <div className=" mb-1 flex justify-between  text-foreground/60">
                 <p>Rentabilité</p>
@@ -72,7 +70,7 @@ export async function InvestmentCard({name, term, imageUrl, investmentType, annu
                 <p className="text-foreground">{investmentType}</p>
               </div>
             </div>
-     
+
             {/* <div className="mt-2 space-y-1">
             <p>Captation  <strong className="text-green-400">50%</strong></p>
               <ProgressBar />

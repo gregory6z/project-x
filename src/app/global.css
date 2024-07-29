@@ -103,4 +103,22 @@ input[type="date"]::-ms-clear {
 input[type="date"]::-moz-clear {
   display: none;
 }
+
+/* Para navegadores baseados em WebKit como Chrome e Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para o Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Para o Internet Explorer */
+input[type="number"]::-ms-clear,
+input[type="number"]::-ms-reveal {
+  display: none;
+}
   

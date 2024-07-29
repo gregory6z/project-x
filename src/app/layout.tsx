@@ -1,7 +1,6 @@
-import { ButtonsSocialNetworks } from "./components/ButtonsSocialNetworks"
-import { Footer } from "./components/Footer"
-import { Header } from "./components/Header"
 import { frFR } from "@clerk/localizations"
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import "./global.css"
 import { Roboto } from "next/font/google"
@@ -13,8 +12,8 @@ import { twMerge } from "tailwind-merge"
 
 import Loading from "./loading"
 import ScrollToTopOnMount from "./components/ScrollTop"
-import { toast, Toaster } from "sonner"
-import { isAuthenticated } from "@/auth/auth"
+import { Toaster } from "sonner"
+import { Providers } from "./providers"
 
 export const metadata = {
   title: "PARIS INVEST | HOME",
@@ -28,12 +27,11 @@ const roboto = Roboto({
   display: "swap",
 })
 
-export  default async function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-
   return (
     <html lang="fr">
       <body className={`${roboto.className} dark bg-background-dark-800  `}>
@@ -75,11 +73,13 @@ export  default async function RootLayout({
             },
           }}
         >
-          <ScrollToTopOnMount>
-            <Toaster richColors className="mb-10 lg:mb-10" duration={1500} />
+          <Providers>
+            <ScrollToTopOnMount>
+              <Toaster richColors className="mb-10 lg:mb-10" duration={1500} />
 
-            <Suspense fallback={<Loading />}>{children}</Suspense>
-          </ScrollToTopOnMount>
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+            </ScrollToTopOnMount>
+          </Providers>
         </ClerkProvider>
       </body>
     </html>

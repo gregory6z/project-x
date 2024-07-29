@@ -15,14 +15,12 @@ export function SignOutForm() {
 
   const router = useRouter()
 
-  const [{ errors, message, }, handleSubmit, isPending] = useFormState(
- 
+  const [{ errors, message }, handleSubmit, isPending] = useFormState(
     signOutAction,
-  
+
     () => {
       router.push(`/auth/sign-in?email=${encodeURIComponent(email)}`)
     },
-
   )
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -175,7 +173,6 @@ export function SignOutForm() {
         >
           Continuer {isPending && <Loader2 className="size-4 animate-spin" />}
         </Button>
-        
       </CardContent>
     </form>
   )
