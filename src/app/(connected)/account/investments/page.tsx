@@ -1,6 +1,14 @@
+import { fetchInvestments } from "@/http/fetch-investments"
 import { InvestmentCardXs } from "./investment-card-xs"
 
-export default function InvestmentsPage() {
+export default async function InvestmentsPage() {
+  const { investments } = await fetchInvestments()
+
+  console.log(investments)
+
+  const sortedInvestments = investments.sort(
+    (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+  )
   return (
     <div className="h-full w-full">
       <div className="mx-auto lg:max-w-[1256px]">
@@ -28,14 +36,18 @@ export default function InvestmentsPage() {
             </p>
           </header>
           <main className="my-10 grid grid-cols-4 gap-6 ">
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
-            <InvestmentCardXs />
+            {sortedInvestments.map((investment) => {
+              return (
+                <InvestmentCardXs
+                  key={investment.id}
+                  name={investment.name}
+                  term={investment.term}
+                  imageUrl={investment.imageUrl}
+                  investmentType={investment.investmentType}
+                  annualProfit={investment.annualProfit}
+                />
+              )
+            })}
           </main>
         </div>
       </div>

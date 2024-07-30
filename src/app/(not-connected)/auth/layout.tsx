@@ -11,7 +11,7 @@ export default async function AuthLayout({
   children: React.ReactNode
 }) {
   if (isAuthenticated()) {
-    redirect("/")
+    redirect("/account/home")
   }
   return (
     <>
