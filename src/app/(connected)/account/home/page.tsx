@@ -1,7 +1,5 @@
-import { GetUser } from "@/http/get-user"
 import { AccountInformation } from "../components/AccountInformation"
 import { HighlightedFundraising } from "../components/HighlightedFundraising"
-import { useMutation, useQuery } from "@tanstack/react-query"
 
 export default async function Home() {
   return (

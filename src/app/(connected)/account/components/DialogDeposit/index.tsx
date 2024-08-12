@@ -15,22 +15,25 @@ import { Button } from "@/app/components/Button"
 import { Input } from "@/app/components/Input"
 import { Label } from "@/app/components/Label"
 import { useEffect, useState } from "react"
-import { useQuery } from "@tanstack/react-query"
-import { GetUser } from "@/http/get-user"
+import { dialogDeposit } from "./action"
+import { useFormState } from "@/app/hooks/useformState"
+import { redirect } from "next/navigation"
 
 export function DialogDeposit() {
+  const [{ message, success }, handleSubmit, isPending] =
+    useFormState(dialogDeposit)
+
   const [selectedAmount, setSelectedAmount] = useState(0)
-
-  const { data } = useQuery({
-    queryKey: ["user"],
-    queryFn: GetUser,
-  })
-
-  const email = data?.user.email
 
   const handleButtonClick = (ammount: number) => {
     setSelectedAmount(ammount)
   }
+
+  useEffect(() => {
+    if (success && message) {
+      redirect(message)
+    }
+  }, [success, message])
 
   useEffect(() => {
     setDisplayValue(`${selectedAmount} €`)
@@ -125,20 +128,28 @@ export function DialogDeposit() {
             1000 €
           </Button>
         </div>
-        <div className="flex items-center justify-end gap-4">
-          <Label className=" text-foreground/60">
-            Insérer la valeur manuellement
-          </Label>
-          <Input
-            className="h-[56px] w-[200px] text-2xl"
-            placeholder="50,00 €"
-            value={displayValue}
-            onChange={handleInputChange} // Parse the input value as a number before setting it to `selectedAmount`
-          />
-        </div>
-        <Button size={"lg"} className="flex gap-2">
-          Déposer sur mon compte
-        </Button>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div className="flex w-full items-center justify-end gap-4">
+            <Label className=" text-foreground/60">
+              Insérer la valeur manuellement
+            </Label>
+            <Input
+              className="h-[56px] w-[200px] text-2xl"
+              id="amount"
+              name="amount"
+              value={displayValue}
+              onChange={handleInputChange} // Parse the input value as a number before setting it to `selectedAmount`
+            />
+          </div>
+          <Button
+            type="submit"
+            disabled={isPending}
+            size={"lg"}
+            className="flex w-full gap-2 "
+          >
+            Déposer sur mon compte
+          </Button>
+        </form>
       </DialogContent>
     </Dialog>
   )

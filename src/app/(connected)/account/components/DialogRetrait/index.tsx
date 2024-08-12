@@ -19,7 +19,6 @@ export function DialogRetrait() {
   const [selectedAmount, setSelectedAmount] = useState(0)
   const handleButtonClick = (ammount: number) => {
     setSelectedAmount(ammount)
-    console.log(ammount)
   }
 
   useEffect(() => {

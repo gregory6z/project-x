@@ -26,10 +26,10 @@ export function InvestmentCardXs({
   return (
     <Card className=" bg-background-dark-700 ">
       <CardHeader>
-        <div className="mx-auto flex h-[120px] w-full items-center justify-center bg-black">
+        <div className="mx-auto flex h-[120px] w-full items-center justify-center rounded-sm bg-black">
           <Image
             src={imageUrl}
-            className="h-full w-full object-fill "
+            className="h-full w-full rounded-sm object-fill "
             height={100}
             width={200}
             alt={""}

@@ -9,6 +9,8 @@ interface User {
   birthDate: Date
   email: string
   phone: string
+
+  customerId?: string
 }
 
 interface BankAccount {
@@ -27,7 +29,11 @@ interface GetUserResponse {
 }
 
 export async function GetUser() {
-  const result = await api.get("get-user").json<GetUserResponse>()
+  const result = await api
+    .get("get-user", {
+      cache: "no-store",
+    })
+    .json<GetUserResponse>()
 
   return result
 }

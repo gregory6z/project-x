@@ -1,7 +1,5 @@
 import { frFR } from "@clerk/localizations"
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-
 import "./global.css"
 import { Roboto } from "next/font/google"
 import { dark } from "@clerk/themes"

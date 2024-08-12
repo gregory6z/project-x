@@ -1,0 +1,7 @@
+### Chamada para a API da Rapyd
+GET https://sandboxapi.rapyd.net/v1/data/countries
+Content-Type: application/json
+access_key: rak_B4AE08865F0E6C52467D
+salt: 9a0ef849c94dd3a04e1c861c
+timestamp: 1722521742
+signature: YzdlZjdiOTY4MWMzNGRhODdiNzZhN2IwZmRiY2VmMzViN2JjMjY4YzA2Y2U3NzBlN2FlOTJiMWJlZTBhZmM0Zg==

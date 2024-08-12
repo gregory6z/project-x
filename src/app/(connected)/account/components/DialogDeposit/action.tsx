@@ -1,54 +1,50 @@
 "use server"
 
-import { GetUser } from "@/http/get-user"
-import { redirect } from "next/navigation"
-import Stripe from "stripe"
+import { createDepositCheckout } from "@/app/lib/square"
+import { z } from "zod"
 
-export async function actionCheckout(amount: number) {
-  const { user } = await GetUser()
+const DepositSchema = z.object({
+  amount: z.string(),
+})
 
-  const stripe = new Stripe(process.env.STRIPE_PRIVATE || "", {
-    apiVersion: "2024-06-20",
-  })
+export async function dialogDeposit(data: FormData) {
+  const result = DepositSchema.safeParse(Object.fromEntries(data))
 
-  const email = user?.email
+  if (!result.success) {
+    const errors = result.error.flatten().fieldErrors
 
-  const customers = await stripe.customers.list({
-    email,
-    limit: 1,
-  })
-
-  let customerId
-
-  if (customers.data.length === 0) {
-    const newCustomer = await stripe.customers.create({
-      email,
-    })
-    customerId = newCustomer.id
-  } else {
-    customerId = customers.data[0].id
+    return { success: false, message: null, errors }
   }
 
-  const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        price_data: {
-          currency: "eur",
-          product_data: {
-            name: "Deposit",
-          },
-          unit_amount: amount * 100,
-        },
-        quantity: 1,
-      },
-    ],
-    mode: "payment",
-    customer: customerId,
-    success_url: `/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `/cancel`,
-  })
+  const { amount } = result.data
 
-  if (session.url) {
-    redirect(session.url)
+  const formattedAmount = amount.replace("€", "").trim()
+
+  try {
+    // const checkoutResponse = await createCheckout(Number(formattedAmount))
+
+    const checkoutResponse = await createDepositCheckout(
+      Number(formattedAmount),
+    )
+
+    if (checkoutResponse && checkoutResponse.url) {
+      return { success: true, message: checkoutResponse.url, errors: null }
+    } else {
+      throw new Error("URL de checkout não encontrada.")
+    }
+  } catch (err) {
+    if (err) {
+      const { message } = err as { message: string }
+
+      return { success: false, message, errors: null }
+    }
+
+    console.error(err)
+
+    return {
+      success: false,
+      message: "Unexpected error, try again in a few minutes.",
+      errors: null,
+    }
   }
 }
