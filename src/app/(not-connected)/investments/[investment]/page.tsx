@@ -1,24 +1,43 @@
-import { Button } from "@/app/components/Button"
-import Image from "next/image"
-import InvestImg from "../../assets/imagem-card-investing.png"
-import { ProgressBar } from "@/app/components/Progress"
 import DetailedInvestiment from "./components/DetailedInvestiment"
 import { ProjectedScenarios } from "./components/ProjectedScenarios"
 import { BenefitsAndRisks } from "./components/BenefitsAndRisks"
-import { Simulator } from "@/app/(not-connected)/(Home)/components/Simulator"
-import { Header } from "@/app/components/Header"
-import { Footer } from "@/app/components/Footer"
+import { fetchInvestments } from "@/http/fetch-investments"
 
-export default function Investiment({
+export default async function Investment({
   params,
-  searchParams,
 }: {
-  params: { slug: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { investment: string }
 }) {
+  const { investments } = await fetchInvestments()
+
+  console.log("investments asdasda", params)
+
+  console.log(params.investment)
+
+  if (!investments || !params) {
+    console.error("Investments or params are undefined or null")
+    return null
+  }
+
+  const investment = investments.find((item) => item.id === params.investment)
+
+  console.log(investment)
+
+  if (!investment) {
+    console.error("Investment not found")
+    return null
+  }
+
   return (
     <>
-      <DetailedInvestiment />
+      <DetailedInvestiment
+        id={investment.id}
+        name={investment.name}
+        term={investment.term}
+        imageUrl={investment.imageUrl}
+        investmentType={investment.investmentType}
+        annualProfit={investment.annualProfit}
+      />
       <ProjectedScenarios />
       <BenefitsAndRisks />
     </>

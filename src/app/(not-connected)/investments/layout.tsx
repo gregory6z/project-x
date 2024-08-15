@@ -8,7 +8,7 @@ export default function InvestmentsLayout({
 }) {
   return (
     <>
-      <Header></Header>
+      {/* <Header></Header> */}
       <div className="border-custom  h-full w-full bg-background-dark-800 lg:min-h-[calc(100vh-5rem)]">
         <div
           className=" mx-[1.25rem]

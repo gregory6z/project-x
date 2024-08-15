@@ -26,6 +26,7 @@ export async function InvestmentsContainer() {
 
         return (
           <InvestmentCard
+            id={investment.id}
             key={investment.id}
             name={investment.name}
             term={investment.term}

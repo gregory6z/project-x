@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/app/components/Button"
 
 interface InvestmentCardProps {
+  id: string
   name: string
   term: number
   imageUrl: string
@@ -19,6 +20,7 @@ interface InvestmentCardProps {
 }
 
 export async function InvestmentCard({
+  id,
   name,
   term,
   imageUrl,
@@ -31,7 +33,7 @@ export async function InvestmentCard({
   }
 
   return (
-    <Link href={"investments/dsladsa"}>
+    <Link href={`investments/${id}`}>
       <div className="flex h-full min-h-[30vh] w-full animate-overlayShow flex-col rounded-xl border border-gray-800 bg-background-dark-900 transition-colors ">
         <div className="h-[16rem] w-full rounded-t-xl bg-black">
           <Image
