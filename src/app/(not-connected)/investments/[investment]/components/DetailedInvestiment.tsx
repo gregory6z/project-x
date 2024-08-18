@@ -1,11 +1,9 @@
 import Image from "next/image"
-import InvestImg from "../../../../assets/imagem-card-investing.png"
 import { ProgressBar } from "@/app/components/Progress"
 import { Button } from "@/app/components/Button"
 import { DialogInvestmentPurchase } from "@/app/(connected)/account/components/DialogInvestmentPurchase"
 
 interface Investment {
-  id: string
   name: string
   term: number
   imageUrl: string
@@ -14,7 +12,6 @@ interface Investment {
 }
 
 export default async function DetailedInvestment({
-  id,
   name,
   term,
   imageUrl,
@@ -46,7 +43,7 @@ export default async function DetailedInvestment({
             >
               Lamine tecniche
             </Button>
-            <DialogInvestmentPurchase id={id} name={name} />
+            <DialogInvestmentPurchase />
           </div>
         </div>
 

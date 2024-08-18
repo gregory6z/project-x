@@ -12,19 +12,19 @@ const DepositSchema = z.object({
 export async function dialogInvestmentPurchase(data: FormData) {
   const result = DepositSchema.safeParse(Object.fromEntries(data))
 
-  if (!result.success) {
-    const errors = result.error.flatten().fieldErrors
-
-    return { success: false, message: null, errors }
-  }
-
-  const { amount, id, name } = result.data
-
-  console.log(amount)
-
-  const formattedAmount = amount.replace("€", "").trim()
-
   try {
+    if (!result.success) {
+      const errors = result.error.flatten().fieldErrors
+
+      return { success: false, message: null, errors }
+    }
+
+    const { amount, id, name } = result.data
+
+    console.log(amount)
+
+    const formattedAmount = amount.replace("€", "").trim()
+
     const checkoutResponse = await createPurchaseInvestmentCheckout({
       amount: Number(formattedAmount),
       investmentId: id,

@@ -31,9 +31,11 @@ export async function InvestmentCard({
   function yearsToMonths(years: number): number {
     return years * 12
   }
+  const params = new URLSearchParams({ id, name }).toString()
+  const href = `/investments/inv?${params}`
 
   return (
-    <Link href={`investments/${id}`}>
+    <Link href={href}>
       <div className="flex h-full min-h-[30vh] w-full animate-overlayShow flex-col rounded-xl border border-gray-800 bg-background-dark-900 transition-colors ">
         <div className="h-[16rem] w-full rounded-t-xl bg-black">
           <Image

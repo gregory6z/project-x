@@ -4,22 +4,20 @@ import { BenefitsAndRisks } from "./components/BenefitsAndRisks"
 import { fetchInvestments } from "@/http/fetch-investments"
 
 export default async function Investment({
-  params,
+  searchParams,
 }: {
-  params: { investment: string }
+  searchParams: { id: string; name: string }
 }) {
   const { investments } = await fetchInvestments()
 
-  console.log("investments asdasda", params)
+  console.log(searchParams.id)
 
-  console.log(params.investment)
-
-  if (!investments || !params) {
+  if (!investments || !searchParams.id) {
     console.error("Investments or params are undefined or null")
     return null
   }
 
-  const investment = investments.find((item) => item.id === params.investment)
+  const investment = investments.find((item) => item.id === searchParams.id)
 
   console.log(investment)
 
@@ -31,7 +29,6 @@ export default async function Investment({
   return (
     <>
       <DetailedInvestiment
-        id={investment.id}
         name={investment.name}
         term={investment.term}
         imageUrl={investment.imageUrl}

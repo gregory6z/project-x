@@ -9,31 +9,26 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/app/components/Dialog"
-import { ButtonScroll } from "../ButtonsScrolls/components/buttonScroll"
-import { Plus } from "lucide-react"
+
 import { Button } from "@/app/components/Button"
 import { Input } from "@/app/components/Input"
 import { Label } from "@/app/components/Label"
 import { useEffect, useState } from "react"
 
+import { useSearchParams, redirect } from "next/navigation"
+
 import { useFormState } from "@/app/hooks/useformState"
-import { redirect } from "next/navigation"
 import { dialogInvestmentPurchase } from "./action"
 
-interface DialogPurchaseInvestmentProps {
-  name: string
-  id: string
-}
-
-export function DialogInvestmentPurchase({
-  name,
-  id,
-}: DialogPurchaseInvestmentProps) {
+export function DialogInvestmentPurchase() {
   const [{ message, success }, handleSubmit, isPending] = useFormState(
     dialogInvestmentPurchase,
   )
 
-  console.log(name, id)
+  const searchParams = useSearchParams()
+
+  const id = searchParams.get("id")
+  const name = searchParams.get("name")
 
   const [selectedAmount, setSelectedAmount] = useState(0)
 
@@ -147,8 +142,8 @@ export function DialogInvestmentPurchase({
             <Label className=" text-foreground/60">
               Insérer la valeur manuellement
             </Label>
-            <input type="hidden" id="id" name="id" value={id} />
-            <input type="hidden" id="name" name="name" value={name} />
+            <input type="hidden" id="id" name="id" value={id ?? "erro"} />
+            <input type="hidden" id="name" name="name" value={name ?? "erro"} />
 
             <Input
               className="h-[56px] w-[200px] text-2xl"

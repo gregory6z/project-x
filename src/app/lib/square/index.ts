@@ -11,7 +11,7 @@ const client = new Client({
 
 const testLocationId = "LG6AZ2R86JMWM"
 
-const parisInvLocationId = "LQXH9YAP1M3SC"
+// const parisInvLocationId = "LQXH9YAP1M3SC"
 
 async function createCustomer() {
   const { user } = await GetUser()
@@ -56,6 +56,7 @@ export async function createDepositCheckout(amount: number) {
             referenceId: transaction.id,
             lineItems: [
               {
+                uid: transaction.id,
                 name: "Deposit",
                 quantity: "1",
                 basePriceMoney: {
@@ -129,18 +130,15 @@ export async function createPurchaseInvestmentCheckout({
               },
             ],
           },
-
           checkoutOptions: {
             redirectUrl: "http://localhost:3000/success",
             askForShippingAddress: false,
-
             acceptedPaymentMethods: {
               googlePay: true,
               applePay: true,
             },
           },
         })
-
         return { url: response.result.paymentLink?.url }
       }
     }
