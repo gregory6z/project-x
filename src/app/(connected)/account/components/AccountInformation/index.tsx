@@ -6,7 +6,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query"
 import { queryClient } from "@/app/lib/react-query"
 
 export async function AccountInformation() {
-  const { bankAccount, user } = await auth()
+  const { bankAccount } = await auth()
 
   const { investments } = await fetchInvestmentsPurchases(bankAccount.id)
 
