@@ -52,10 +52,12 @@ export function ButtonsScrolls() {
         </div>
 
         <div className="embla__slide">
-          <ButtonScroll black Icon={History}>
-            {" "}
-            Historique
-          </ButtonScroll>
+          <Link href="/account/history">
+            <ButtonScroll black Icon={History}>
+              {" "}
+              Historique
+            </ButtonScroll>
+          </Link>
         </div>
         <div className="embla__slide"></div>
         <ButtonScroll black Icon={PieChart}>

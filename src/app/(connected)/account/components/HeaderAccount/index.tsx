@@ -7,7 +7,6 @@ import {
   Eye,
   LayoutPanelLeft,
   PieChart,
-  Plus,
   ShieldQuestion,
 } from "lucide-react"
 import Link from "next/link"
@@ -35,7 +34,7 @@ export function HeaderAccount() {
             Investir
           </NavLink>
 
-          <NavLink href="/account/ajouter" Icon={PieChart}>
+          <NavLink href="/account/management" Icon={PieChart}>
             Gestion
           </NavLink>
 
