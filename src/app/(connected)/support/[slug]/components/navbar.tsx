@@ -1,5 +1,5 @@
 import { faqData } from "../../faq"
-import { NavLink } from "@/app/(connected)/account/components/HeaderAccount/components/NavLink"
+import { NavLink } from "@/app/(connected)/[accountId]/components/HeaderAccount/components/NavLink"
 
 export function Navbar() {
   const data = faqData

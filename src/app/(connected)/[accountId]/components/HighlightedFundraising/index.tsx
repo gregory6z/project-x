@@ -14,7 +14,7 @@ export async function HighlightedFundraising() {
   const anualProfit = investment.annualProfit * 100
 
   return (
-    <div className="  w-full rounded-md border border-solid border-gray-700 bg-background-dark-700 p-4 lg:h-[62%] lg:w-[40%] ">
+    <div className="  w-full rounded-2xl border border-solid border-zinc-700 bg-zinc-800/80 p-4 lg:h-[62%] lg:w-[40%] ">
       <header className="flex items-center gap-2 text-gray-100">
         <Pin className="h-6 w-6"></Pin>
         <div className="flex w-full items-center justify-between">

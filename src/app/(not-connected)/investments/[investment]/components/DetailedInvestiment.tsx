@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ProgressBar } from "@/app/components/Progress"
 import { Button } from "@/app/components/Button"
-import { DialogInvestmentPurchase } from "@/app/(connected)/account/components/DialogInvestmentPurchase"
+import { DialogInvestmentPurchase } from "@/app/(connected)/[accountId]/components/DialogInvestmentPurchase"
 
 interface Investment {
   name: string

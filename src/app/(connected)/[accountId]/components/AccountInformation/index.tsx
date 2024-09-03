@@ -51,20 +51,22 @@ export async function AccountInformation() {
   const formattedAmountProfits = formatCurrency(Number(amountProfits))
 
   return (
-    <div className="flex flex-1 flex-col ">
-      <div className="flex h-full w-full   flex-col gap-2 rounded-xl border-2 border-solid border-yellow-normal bg-yellow-normal/30 p-4 tracking-wide ">
+    <div className="flex min-h-[261px] flex-1 flex-col">
+      <div className="border-1 bg-zinc-90/30 flex   h-full w-full flex-col gap-2 rounded-2xl border  border-primary p-4 tracking-wide ">
         <div className="flex items-center justify-between">
-          <p className="text-lg  font-bold text-gray-100">Compte courant</p>
+          <h1 className="text-2xl font-bold tracking-tight text-background text-gray-100">
+            Compte courant
+          </h1>
           <ChevronRight className="text-gray-100" />
         </div>
-        <p className="text-3xl font-semibold text-yellow-normal">
+        <p className="text-3xl font-semibold text-primary">
           {formattedBankAccountBalance}
         </p>
         <div className="flex flex-col gap-1">
           <div className="flex items-center justify-between">
-            <p className="text-lg  font-bold text-gray-100">
+            <h1 className="text-2xl font-bold  tracking-tight text-background text-gray-100">
               Mes Investissements
-            </p>
+            </h1>
 
             <ChevronRight className="text-gray-100" />
           </div>

@@ -44,8 +44,7 @@ export function HeaderAccount() {
 
           <div className="flex items-center justify-center lg:gap-3">
             <UserButton></UserButton>
-
-            <p className="hidden lg:block">Mon compte</p>
+            <NavLink href="/account/account">Mon Compte</NavLink>{" "}
           </div>
         </nav>
       </div>

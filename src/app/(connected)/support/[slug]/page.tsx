@@ -20,7 +20,9 @@ export default function SupportContent({
       {data.map((item) => {
         return (
           <div className="w-full" key={item?.category}>
-            <h1 className="lg:text-5xl">{item?.category}</h1>
+            <h1 className="font-semibold tracking-tight text-primary lg:text-5xl">
+              {item?.category}
+            </h1>
             <div className=" mt-14 flex  flex-col ">
               {item?.topics.map((topic, index) => {
                 return (

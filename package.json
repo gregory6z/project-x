@@ -31,8 +31,9 @@
     "cookies-next": "^4.2.1",
     "embla-carousel-react": "8.0.0-rc14",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "15.0.0-rc.0",
     "framer-motion": "^10.16.4",
+    "install": "^0.13.0",
     "keen-slider": "^6.8.6",
     "ky": "^1.4.0",
     "lucide-react": "^0.284.0",
@@ -40,11 +41,12 @@
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "react": "19.0.0-rc-9c6806964f-20240703",
-    "react-dom": "19.0.0-rc-9c6806964f-20240703",
+    "react": "19.0.0-rc-7771d3a7-20240827",
+    "react-dom": "19.0.0-rc-7771d3a7-20240827",
     "react-icons": "^4.11.0",
     "react-intersection-observer": "^9.5.2",
     "react-query": "link:@types/@tanstack/react-query",
+    "recharts": "^2.13.0-alpha.4",
     "sonner": "^1.5.0",
     "square": "^37.1.1",
     "stripe": "^16.4.0",
@@ -56,6 +58,11 @@
     "zod": "^3.23.8",
     "zustand": "^4.4.3"
   },
+  "overrides": {
+    "recharts": {
+        "react-is": "$react-is"
+    }
+},
   "devDependencies": {
     "@clerk/themes": "^1.7.9",
     "@rocketseat/eslint-config": "^2.1.0"

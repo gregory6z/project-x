@@ -6,9 +6,9 @@ export default function AccountLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <div className="">
       <HeaderAccount></HeaderAccount>
-      <div className="h-full w-full bg-background-dark-800">{children}</div>
-    </>
+      <div className="h-full w-full ">{children}</div>
+    </div>
   )
 }

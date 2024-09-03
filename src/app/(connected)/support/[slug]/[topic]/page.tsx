@@ -1,5 +1,4 @@
 /* eslint-disable array-callback-return */
-import Link from "next/link"
 import { faqData } from "../../faq"
 
 export default function SupportTopic({
@@ -29,18 +28,22 @@ export default function SupportTopic({
 
   return (
     <div className="mb-20 flex w-full flex-col px-20 text-foreground/90">
-      <h1 className="lg:text-5xl">{topicDetails[0].title}</h1>
-      <p className="mt-4 text-foreground/60 lg:text-lg">
+      <h1 className="font-semibold tracking-tighter text-primary lg:text-5xl">
+        {topicDetails[0].title}
+      </h1>
+      <p className="mt-4 text-foreground/80 lg:text-lg">
         {topicDetails[0].description}
       </p>
 
-      <h2 className="mt-4 text-3xl ">{topicDetails[0].details?.header}</h2>
+      <h2 className="mt-6 text-3xl font-semibold tracking-tight  ">
+        {topicDetails[0].details?.header}{" "}
+      </h2>
       <div className="flex flex-col gap-4 text-pretty">
         {topicDetails[0].details?.content.map((item, index) => {
           return (
             <div key={index}>
               {" "}
-              <h3 className="mt-4 text-2xl">{item.title}</h3>
+              <h3 className="mt-4 text-2xl text-foreground">{item.title}</h3>
               <p className=" mt-2 text-lg text-foreground/60">
                 {item.description}
               </p>

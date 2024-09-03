@@ -32,7 +32,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${roboto.className} dark bg-background-dark-800  `}>
+      <body
+        className={`${roboto.className} dark bg-background-dark-800 antialiased  `}
+      >
         <ClerkProvider
           localization={frFR}
           appearance={{

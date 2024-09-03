@@ -27,9 +27,10 @@ export function AccortionTrigger({ children }: { children: React.ReactNode }) {
         <h1 className="  py-4 text-xl lg:text-2xl ">{children}</h1>
 
         <ChevronDown
-          className="text-gray-100 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
+          className=" text-gray-100 transition-transform duration-300 group-data-[state=open]:rotate-180"
           aria-hidden
         />
+        {/* ease-[cubic-bezier(0.87,_0,_0.13,_1)] */}
       </Accordion.Trigger>
     </Accordion.Header>
   )

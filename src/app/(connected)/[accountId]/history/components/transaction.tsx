@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback } from "@/app/components/Avatar"
 
 export function Transaction() {
   return (
-    <div className=" mt-6 w-[800px]">
+    <div className=" mt-6 max-w-[800px]">
       <p className="uppercase tracking-wide ">Lundi 12, juin</p>
       <div className="  mt-1 flex w-full items-center justify-between rounded-sm border border-foreground/40 lg:p-4">
         <div className="flex items-center gap-4">
