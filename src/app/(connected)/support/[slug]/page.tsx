@@ -16,11 +16,11 @@ export default function SupportContent({
     .filter((item) => item !== undefined)
 
   return (
-    <div className="flex w-full flex-col px-20">
+    <div className="flex w-full flex-col px-[1.5rem] lg:px-20">
       {data.map((item) => {
         return (
           <div className="w-full" key={item?.category}>
-            <h1 className="font-semibold tracking-tight text-primary lg:text-5xl">
+            <h1 className="mt-10 text-3xl font-semibold tracking-tight text-primary lg:mt-0 lg:text-5xl">
               {item?.category}
             </h1>
             <div className=" mt-14 flex  flex-col ">
@@ -28,7 +28,7 @@ export default function SupportContent({
                 return (
                   <Link
                     href={topic?.link}
-                    className=" w-full  border-t border-muted-foreground/40 py-6 text-foreground/80 transition-all last:border-b hover:text-primary  lg:text-2xl"
+                    className=" w-full  border-t border-muted-foreground/40 py-6 text-lg text-foreground/80 transition-all last:border-b hover:text-primary lg:text-2xl"
                     key={index}
                   >
                     {topic?.title}

@@ -5,7 +5,7 @@ export function Navbar() {
   const data = faqData
 
   return (
-    <nav className="flex h-full flex-col items-start gap-6 lg:w-[20rem] lg:text-xl">
+    <nav className="hidden h-full flex-col items-start gap-6  lg:flex lg:w-[20rem] lg:text-xl">
       {data.map((item, index) => {
         return (
           <NavLink href={item.link} key={index}>

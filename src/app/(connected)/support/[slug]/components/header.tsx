@@ -5,10 +5,10 @@ import Link from "next/link"
 export function FaqHeader() {
   return (
     <header className="h-[5rem] w-full bg-zinc-800">
-      <div className="mx-auto flex h-full items-center gap-14 lg:max-w-[1260px]">
+      <div className="mx-auto flex  h-full items-center gap-14 px-[1.5rem] lg:max-w-[1260px] lg:px-0">
         <Link
           href="/support"
-          className="flex h-full items-center text-lg font-semibold tracking-widest text-primary"
+          className="hidden h-full  items-center text-lg font-semibold tracking-widest text-primary lg:flex"
         >
           FOIRE AUX QUESTIONS (FAQ)
         </Link>
