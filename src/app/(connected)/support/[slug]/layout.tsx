@@ -9,7 +9,7 @@ export default function TopicLayout({
   return (
     <div>
       <FaqHeader></FaqHeader>
-      <div className="mx-auto flex  h-full lg:max-w-[1260px] lg:pt-[5rem]   ">
+      <div className="mx-auto flex h-full  lg:max-w-[1260px] lg:px-8 lg:pt-[5rem] xl:px-0   ">
         <Navbar></Navbar>
         {children}
       </div>
