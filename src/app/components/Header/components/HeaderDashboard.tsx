@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-import { UserButton, useAuth, useUser } from "@clerk/nextjs"
+import { useAuth, useUser } from "@clerk/nextjs"
 
 export function HeaderDashboard() {
   const auth = useAuth().isSignedIn

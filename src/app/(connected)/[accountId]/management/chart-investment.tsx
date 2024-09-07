@@ -95,8 +95,8 @@ interface ChartInvestmentProps {
 
 export function ChartInvestment({ width }: ChartInvestmentProps) {
   return (
-    <Card className="h-full w-full bg-zinc-900">
-      <CardHeader>
+    <Card className="h-full w-full rounded-xl bg-zinc-900">
+      <CardHeader className="py-[1.5rem]  ">
         <CardTitle>Évolution de Vos Investissements</CardTitle>
         <CardDescription>
           Suivez l'évolution de vos investissements et voyez comment votre
@@ -105,8 +105,11 @@ export function ChartInvestment({ width }: ChartInvestmentProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="max-h-[240px]">
-          <AreaChart width={width} height={250} accessibilityLayer data={data2}>
+        <ChartContainer
+          config={chartConfig}
+          className="h-full max-h-[240px] w-full"
+        >
+          <AreaChart className="h-full w-full" accessibilityLayer data={data2}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="month"

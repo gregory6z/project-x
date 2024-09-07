@@ -15,7 +15,8 @@ import {
   ChartTooltipContent,
 } from "@/app/components/Chart"
 import { TrendingUp } from "lucide-react"
-import { Pie, PieChart } from "recharts"
+import { useEffect, useState } from "react"
+import { Pie, PieChart, ResponsiveContainer } from "recharts"
 
 const chartData = [
   { investment: "investment1_ $ :", money: 3000, fill: "#22c55e" },
@@ -50,19 +51,20 @@ const chartConfig = {
 export function ChartInvestmentPie() {
   return (
     <Card className="flex flex-col bg-zinc-900">
-      <CardHeader className=" pb-0">
+      <CardHeader className=" py-[1.5rem]  ">
         <CardTitle className="">Mon portefeuille</CardTitle>
         <CardDescription>
           Le graphique en secteurs offre une vue claire et intuitive de la
           composition de la portefeuille.{" "}
         </CardDescription>
       </CardHeader>
-      <CardContent className="  h-[240px] min-w-[400px]">
+      <CardContent className="  lg:h-full   lg:min-h-[100px] lg:min-w-[400px]">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto    pb-0 [&_.recharts-pie-label-text]:fill-foreground"
+          className="mx-auto h-full    pb-0 [&_.recharts-pie-label-text]:fill-foreground"
         >
-          <PieChart width={400} height={250}>
+          <PieChart>
+            {" "}
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
             <Pie
               data={chartData}

@@ -58,13 +58,13 @@ const chartConfig = {
 
 export function ChartInvestmentBar() {
   return (
-    <Card className="bg-zinc-900">
+    <Card className="rounded-xl border border-zinc-800 bg-zinc-900 py-[1.5rem]">
       <CardHeader>
         <CardTitle>Bar Chart - Negative</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="max-h-[182px]">
+        <ChartContainer config={chartConfig} className="max-h-[182px] w-full">
           <BarChart accessibilityLayer width={536} height={182} data={data2}>
             <CartesianGrid vertical={false} />
             <ChartTooltip

@@ -13,14 +13,13 @@ import { ChartInvestmentBar } from "./chart-investment-bar"
 export default async function Management() {
   return (
     <div className="  h-full w-full ">
-      <div className="mx-auto mt-20 max-w-[1260px] ">
-        <div className="mt-12 flex gap-6 ">
+      <div className="mx-auto mt-8 w-full lg:mt-20 lg:max-w-[1260px] ">
+        <div className="flex flex-col gap-2 lg:mt-12 lg:flex-row lg:gap-6 ">
           <ChartInvestmentPie />
           <ChartInvestment width={672} />
-          {/* <Component /> */}
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-4 ">
+        <div className="mt-2 grid gap-2 lg:mt-8 lg:grid-cols-4 lg:gap-6 ">
           <div className=" flex flex-col items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 p-4">
             <div className="flex flex-col items-center justify-center">
               {" "}
@@ -81,7 +80,7 @@ export default async function Management() {
           </div>
         </div>
         <div className=" mt-8 grid gap-6 pb-[5rem] lg:grid-cols-2">
-          <Card className="bg-zinc-900">
+          {/* <Card className="bg-zinc-900">
             <CardHeader>
               <CardTitle>Mes Investissements</CardTitle>
               <CardDescription>Todos os meus investimentos</CardDescription>
@@ -117,8 +116,8 @@ export default async function Management() {
                 </div>
               </div>
             </CardContent>
-          </Card>
-          <Card className="bg-zinc-900">
+          </Card> */}
+          {/* <Card className="bg-zinc-900">
             <CardHeader>
               <CardTitle>Mes dernières transactions</CardTitle>
               <CardDescription>Ultimas transacoes realizadas</CardDescription>
@@ -128,7 +127,7 @@ export default async function Management() {
               <Transaction />
               <Transaction />
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </div>
