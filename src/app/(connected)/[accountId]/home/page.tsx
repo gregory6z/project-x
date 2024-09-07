@@ -1,4 +1,3 @@
-import { Button } from "@/app/components/Button"
 import { AccountInformation } from "../components/AccountInformation"
 import { HighlightedFundraising } from "../components/HighlightedFundraising"
 import Image from "next/image"

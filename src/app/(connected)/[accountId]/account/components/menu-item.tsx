@@ -8,7 +8,7 @@ interface MenuItemProps {
 
 export default function MenuItem({ children, Icon }: MenuItemProps) {
   return (
-    <div className="flex w-full items-center justify-between rounded-t-lg border-b px-6 hover:cursor-pointer hover:bg-zinc-900">
+    <div className="flex w-full items-center justify-between  rounded-t-lg border-b px-6 hover:cursor-pointer hover:bg-zinc-900">
       <div className="flex h-[4.5rem] items-center gap-6  ">
         {" "}
         <Icon />
