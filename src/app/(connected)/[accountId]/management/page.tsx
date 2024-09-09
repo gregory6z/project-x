@@ -13,7 +13,7 @@ import { ChartInvestmentBar } from "./chart-investment-bar"
 export default async function Management() {
   return (
     <div className="  h-full w-full ">
-      <div className="mx-auto mt-8 w-full lg:mt-20 lg:max-w-[1260px] ">
+      <div className="mx-auto mt-8 w-full px-4 lg:mt-20 lg:max-w-[1260px] lg:px-0 ">
         <div className="flex flex-col gap-2 lg:mt-12 lg:flex-row lg:gap-6 ">
           <ChartInvestmentPie />
           <ChartInvestment width={672} />
@@ -23,24 +23,30 @@ export default async function Management() {
           <div className=" flex flex-col items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 p-4">
             <div className="flex flex-col items-center justify-center">
               {" "}
-              <p>Valor total em conta</p>
-              <p className="text-2xl font-extrabold text-green-400">200$</p>
+              <p className="text-sm lg:text-base">Valor total em conta</p>
+              <p className="text-2xl font-extrabold text-green-400">50.000$</p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="mt-4 flex flex-col items-center">
               {" "}
-              Valor disponivel para saque
+              <p className="text-center text-sm lg:text-base">
+                Valor disponivel para saque
+              </p>
               <p className="text-2xl font-extrabold text-primary">200$</p>
             </div>
           </div>
           <div className=" flex flex-col items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 p-4">
             <div className="flex flex-col items-center ">
               {" "}
-              <p>Valor total investido</p>
+              <p className="text-center text-sm lg:text-base">
+                Valor total investido
+              </p>
               <p className="text-2xl font-extrabold text-green-400">200$</p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="mt-4 flex flex-col items-center">
               {" "}
-              Valor total atual
+              <p className="text-center text-sm lg:text-base">
+                Valor total atual
+              </p>
               <p className="text-2xl font-extrabold text-primary">200$</p>
             </div>
           </div>
@@ -52,19 +58,19 @@ export default async function Management() {
           <div className=" flex flex-col  justify-center rounded-lg border border-zinc-800 bg-zinc-900 p-4">
             <div className="flex justify-between">
               {" "}
-              Rentabilidade mensal
+              <p className=" text-sm lg:text-base">Rentabilidade mensal</p>
               <p className="text-2xl text-green-400">1.5%</p>
             </div>
-            <div className="flex justify-between">
+            <div className="mt-4 flex justify-between">
               {" "}
-              Rentabilidade total
+              <p className=" text-sm lg:text-base">Rentabilidade total</p>
               <p className="text-2xl text-primary">13%</p>
             </div>
           </div>
           <div className=" flex flex-col  justify-center rounded-lg border border-zinc-800 bg-zinc-900 p-4">
             <div className="flex items-center justify-between">
               {" "}
-              depositos futuros
+              <p className=" text-sm lg:text-base">depositos futuros</p>
               <p className="text-2xl text-green-400">200$</p>
             </div>
 
@@ -74,7 +80,7 @@ export default async function Management() {
 
             <div className="flex items-center justify-between">
               {" "}
-              depositos realizados
+              <p className=" text-sm lg:text-base"> depositos realizados</p>
               <p className="text-2xl text-primary">200$</p>
             </div>
           </div>
